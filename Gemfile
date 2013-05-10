@@ -15,7 +15,11 @@ group :doc do
 end
 
 group :development do
-  gem 'capybara', '~> 2.1.0'
   gem 'foreman', '~> 0.63.0'
+end
+
+group :development, :test do
+  gem 'capybara', '~> 2.1.0'
   gem 'rspec-rails', '~> 2.13.1'
+  gem 'shoulda', '~> 3.5.0'
 end
