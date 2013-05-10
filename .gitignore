@@ -27,9 +27,6 @@ pickle-email-*.html
 .rvmrc
 .env
 
-# Ignore config/database.yml, leave that to individual devs
-/config/database.yml
-
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
