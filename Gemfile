@@ -9,6 +9,7 @@ gem 'pg', '~> 0.15.1'
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', group: :production
+gem 'rails_12factor', group: :production
 
 gem 'secure_headers'
 group :doc do
