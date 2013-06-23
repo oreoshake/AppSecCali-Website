@@ -3,9 +3,11 @@ class BetaRequestsController < ApplicationController
     beta_request = BetaRequest.new(beta_request_params)
 
     if beta_request.save
-      render text: "Thanks for signing up!"
+      flash[:notice] = "Thanks for signing up!"
+      redirect_to root
     else
-      render text: beta_request.errors.full_messages.to_sentence, stats: 400
+      flash[:error] = beta_request.errors.full_messages.to_sentence
+      redirect_to :back
     end
   end
 

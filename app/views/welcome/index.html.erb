@@ -1,22 +1,23 @@
 <div class="masthead">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#cfp">Call For Papers</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <h3 class="muted">Project name</h3>
+  <h3 class="muted">OWASP California Regional Event</h3>
 </div>
 
 <hr>
 
 <div class="jumbotron">
-  <h1>Super awesome marketing speak!</h1>
-  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  <h1>Surf, Sand, Security!</h1>
+  <p class="lead">Get together and discuss security on the shores of Santa Monica, CA.<a href="https://twitter.com/intent/tweet?button_hashtag=owaspcali" class="twitter-hashtag-button" data-size="large" data-dnt="true">Tweet #owaspcali</a></p>
+  <p class="lead">January 27 &mdash; 28 2014</p>
 
   <%= form_for @beta_request, class: 'form-inline' do |f| %>
     <%= f.text_field :name, placeholder: "Name" %>
     <%= f.text_field :email, placeholder: "Email" %>
-    <%= f.button 'Join Now', class: 'btn btn-primary' %>
+    <%= f.button 'Sign up for announcements', class: 'btn btn-primary' %>
   <% end -%>
 </div>
 
@@ -24,25 +25,65 @@
 
 <div class="row-fluid marketing">
   <div class="span6">
-    <h4>Subheading</h4>
-    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    <h4>Annenberg Community Beach House</h4>
+    <p>Set on five acres of Santa Monica's beach, the Annenberg Community Beach House blends historic Hollywood glamour with coastal Califonia style in an unparalleled meeting and event destination. Winner of Best New Venue at the 2010 BizBash LA Style Awards, the Beach House is a fully accessible, Gold LEED venue with floor to ceiling ocean views, verandas and decks.</p>
 
-    <h4>Subheading</h4>
-    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-    <h4>Subheading</h4>
-    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <h4>Address</h4>
+    <p>415 Pacific Coast Highway
+Santa Monica, CA 90402</p>
   </div>
 
   <div class="span6">
-    <h4>Subheading</h4>
-    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-    <h4>Subheading</h4>
-    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-    <h4>Subheading</h4>
-    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Annenberg+Community+Beach+House,+Pacific+Coast+Highway,+Santa+Monica,+CA&amp;aq=0&amp;oq=annenber&amp;sll=37.269174,-119.306607&amp;sspn=11.498073,23.269043&amp;ie=UTF8&amp;hq=Annenberg+Community+Beach+House,&amp;hnear=E+Pacific+Coast+Hwy,+Santa+Monica,+Los+Angeles,+California&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=12048857790114702162&amp;ll=34.024316,-118.512688&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Annenberg+Community+Beach+House,+Pacific+Coast+Highway,+Santa+Monica,+CA&amp;aq=0&amp;oq=annenber&amp;sll=37.269174,-119.306607&amp;sspn=11.498073,23.269043&amp;ie=UTF8&amp;hq=Annenberg+Community+Beach+House,&amp;hnear=E+Pacific+Coast+Hwy,+Santa+Monica,+Los+Angeles,+California&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=12048857790114702162&amp;ll=34.024316,-118.512688" style="color:#0000FF;text-align:left">View Larger Map</a></small>
   </div>
 </div>
+<div class="row-fluid marketing">
+  <div class="span12 pagination-centered">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Loci904axEQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="row-fluid marketing">
+  <div class="span6">
+    <h4><a name="cfp">Interested in speaking?</a></h4>
+    <p>Information for CFP is coming soon.</p>
+  </div>
 
+  <div class="span6">
+    <h4>Topics</h4>
+    <ul>
+      <li>Security automation</li>
+      <li>Secure Coding Education</li>
+      <li>Vulnerability analysis: code review, pentest, static analysis</li>
+      <li>Privacy-preserving methods for data access and data mining</li>
+      <li>Security program management</li>
+      <li>Access control models</li>
+      <li>Forensics</li>
+      <li>Tooling</li>
+      <li>Reverse Engineering Malware and Malware Analysis</li>
+      <li>Exploitation Tactics</li>
+      <li>Information leakage via social networks</li>
+      <li>Field reports from corporations regarding the institution of Web Application Security processes</li>
+      <li>OWASP in your workplace, university, etc.</li>
+    </ul>
+  </div>
+</div>
+<div class="row-fluid marketing">
+  <h4><a name="confact">Contact us.</a></h4>
+  <a href="https://twitter.com/intent/tweet?screen_name=owaspcalifornia" class="twitter-mention-button" data-size="large" data-dnt="true">Tweet to @owaspcalifornia</a>
+  <div class="span5">
+    <p><img src="https://si0.twimg.com/profile_images/3203349049/0d2bafa52714b4652f84b7b5b49be40c.png"  width="73" height="73"></p>
+    <a href="https://twitter.com/owaspcalifornia" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @owaspcalifornia</a>
+  
+    <p><img src="https://si0.twimg.com/profile_images/589478272/owasp_logo_bigger_bigger.gif" width="73" height="73"></p>
+    <a href="https://twitter.com/owaspla" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @owaspla</a>
+  </div>
+
+  <div class="span5">
+    <p><img src="https://si0.twimg.com/profile_images/589478272/owasp_logo_bigger_bigger.gif"  width="73" height="73"></p>
+    <a href="https://twitter.com/owaspoc" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @owaspoc</a>
+  
+    <p><img src="https://si0.twimg.com/profile_images/589478272/owasp_logo_bigger_bigger.gif" width="73" height="73"></p>
+    <a href="https://twitter.com/owaspbayarea" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @owaspbayarea</a>
+  </div>
+
+</div>

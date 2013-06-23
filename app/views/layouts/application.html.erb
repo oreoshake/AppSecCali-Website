@@ -6,6 +6,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% [:notice, :error, :alert].each do |level| %>
+  <% unless flash[level].blank? %>
+    <div class="alert <%= flash_class(level) %>">
+      <a class="close" href="#">×</a>
+      <%= content_tag :p, flash[level] %>
+    </div>
+  <% end %>
+<% end %>
+
   <div class="container-narrow">
     <%= yield %>
 
