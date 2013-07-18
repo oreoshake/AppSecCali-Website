@@ -1,6 +1,6 @@
 module ApplicationHelper
   def brand_name
-    'OWASP OC, OWASP LA, OWASP Bay Area, OWASP SD'
+    'OWASP OC, OWASP LA, OWASP Bay Area, OWASP Central, OWASP Santa Barbara, OWASP SD'
   end
 
   def flash_class(level)
@@ -9,5 +9,5 @@ module ApplicationHelper
     when :error then "error"
     when :alert then "warning"
     end
-  end  
+  end
 end
