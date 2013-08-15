@@ -19,6 +19,7 @@ end
 group :development do
   gem 'foreman', '~> 0.63.0'
   gem 'sqlite3'
+  gem 'puma'
 end
 
 group :development, :test do
