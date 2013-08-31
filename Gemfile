@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', group: :production
 gem 'rails_12factor', group: :production
+gem 'rack-ssl'
 
 gem 'secure_headers'
 group :doc do

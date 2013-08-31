@@ -1,3 +1,5 @@
+use Rack::SSL
+
 SecureHeaders::Configuration.configure do |config|
   config.csp = {
   	:default_src => 'self',
