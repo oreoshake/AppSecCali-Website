@@ -1,4 +1,6 @@
 RecruitLy::Application.routes.draw do
+  resources :speakers
+
   root 'welcome#index'
 
   resources :beta_requests, only: [:create]

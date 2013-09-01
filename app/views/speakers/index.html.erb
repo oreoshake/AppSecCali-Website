@@ -1,0 +1,39 @@
+<h1>Listing speakers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>Email</th>
+      <th>Image url</th>
+      <th>Twitter handle</th>
+      <th>Title</th>
+      <th>Company</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @speakers.each do |speaker| %>
+      <tr>
+        <td><%= speaker.name %></td>
+        <td><%= speaker.bio %></td>
+        <td><%= speaker.email %></td>
+        <td><%= speaker.image_url %></td>
+        <td><%= speaker.twitter_handle %></td>
+        <td><%= speaker.title %></td>
+        <td><%= speaker.company %></td>
+        <td><%= link_to 'Show', speaker %></td>
+        <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
+        <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Speaker', new_speaker_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @speaker.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @speaker.bio %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @speaker.email %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @speaker.image_url %>
+</p>
+
+<p>
+  <strong>Twitter handle:</strong>
+  <%= @speaker.twitter_handle %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @speaker.title %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @speaker.company %>
+</p>
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
+<%= link_to 'Back', speakers_path %>
