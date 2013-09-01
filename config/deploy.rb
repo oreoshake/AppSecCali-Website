@@ -1,3 +1,6 @@
+require 'bundler/capistrano'
+
+
 default_run_options[:pty] = true  # Must be set for the password prompt
                                   # from git to work
 
@@ -7,9 +10,11 @@ set :user, "neil.matatall"  # The server's user for deploys
 set :application, "appsec_california_2014"
 set :repository,  "https://github.com/oreoshake/AppSecCali-Website.git"
 set :branch, "master"
+
 set :deploy_via, :remote_cache
+# set :deploy_via, :copy
 set :use_sudo, true
-server "162.209.14.65", :app, :web, :db, :primary => true
+role :app, "162.209.14.65"
 
 
 namespace :deploy do
@@ -20,4 +25,4 @@ namespace :deploy do
   end
 end
 
-
+run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
