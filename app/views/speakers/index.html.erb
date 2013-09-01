@@ -1,10 +1,9 @@
 <h1>Listing speakers</h1>
 
-<table>
+<table border=1>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Bio</th>
       <th>Email</th>
       <th>Image url</th>
       <th>Twitter handle</th>
@@ -20,10 +19,9 @@
     <% @speakers.each do |speaker| %>
       <tr>
         <td><%= speaker.name %></td>
-        <td><%= speaker.bio %></td>
-        <td><%= speaker.email %></td>
-        <td><%= speaker.image_url %></td>
-        <td><%= speaker.twitter_handle %></td>
+        <td><%= mail_to speaker.email %></td>
+        <td><%= image_tag speaker.image_url %></td>
+        <td><%= link_to "https://twitter.com/" + speaker.twitter_handle %></td>
         <td><%= speaker.title %></td>
         <td><%= speaker.company %></td>
         <td><%= link_to 'Show', speaker %></td>

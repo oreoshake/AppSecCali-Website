@@ -6,23 +6,18 @@
 </p>
 
 <p>
-  <strong>Bio:</strong>
-  <%= @speaker.bio %>
-</p>
-
-<p>
   <strong>Email:</strong>
-  <%= @speaker.email %>
+  <%= mail_to @speaker.email %>
 </p>
 
 <p>
   <strong>Image url:</strong>
-  <%= @speaker.image_url %>
+  <%= image_tag @speaker.image_url %>
 </p>
 
 <p>
   <strong>Twitter handle:</strong>
-  <%= @speaker.twitter_handle %>
+  <%= link_to "https://twitter.com/" + @speaker.twitter_handle %>
 </p>
 
 <p>

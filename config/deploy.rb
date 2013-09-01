@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+# require 'bundler/capistrano'
 
 
 default_run_options[:pty] = true  # Must be set for the password prompt
