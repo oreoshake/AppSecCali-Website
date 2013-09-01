@@ -10,8 +10,9 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'rails_12factor', group: :production
 gem 'rack-ssl'
-
 gem 'secure_headers'
+gem 'capistrano'
+
 group :doc do
   gem 'sdoc', require: false
 end
