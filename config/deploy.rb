@@ -4,7 +4,6 @@ default_run_options[:pty] = true  # Must be set for the password prompt
 set :deploy_to, "/var/www"
 set :scm, "git"
 set :user, "neil.matatall"  # The server's user for deploys
-set :scm_passphrase, ENV["PASSWORD"]
 set :application, "appsec_california_2014"
 set :repository,  "https://github.com/oreoshake/AppSecCali-Website.git"
 set :branch, "master"
