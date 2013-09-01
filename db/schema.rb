@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901211146) do
+ActiveRecord::Schema.define(version: 20130901232446) do
 
   create_table "beta_requests", force: true do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20130901211146) do
 
   create_table "speakers", force: true do |t|
     t.string   "name"
-    t.string   "bio"
+    t.text     "bio"
     t.string   "email"
     t.string   "image_url"
     t.string   "twitter_handle"
