@@ -5,7 +5,7 @@ feature "A user signing up for a beta invitation" do
     visit '/'
     fill_in "Name", with: "John Doe"
     fill_in "Email", with: "jdoe@example.com"
-    click_button "Join Now"
+    click_button "Sign up for announcements"
 
     expect(page).to have_content('Thanks for signing up!')
     beta_request = BetaRequest.last
