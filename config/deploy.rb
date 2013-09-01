@@ -15,6 +15,7 @@ set :deploy_via, :remote_cache
 # set :deploy_via, :copy
 set :use_sudo, true
 role :app, "162.209.14.65"
+# server :app, :web, :db, :primary => true
 
 
 namespace :deploy do
@@ -25,4 +26,3 @@ namespace :deploy do
   end
 end
 
-# sudo "rvmsudo bundle install", :as => 'neil.matatall', :sudo => "/home/neil.matatall/.rvm/bin/rvmsudo"
