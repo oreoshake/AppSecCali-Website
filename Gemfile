@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0.rc2'
+gem 'rails', '~> 4.0.0'
 
-gem 'bootstrap-sass', '~> 2.3.1.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'bootstrap-sass'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'pg', '~> 0.15.1'
-gem 'sass-rails', '~> 4.0.0.rc1'
-gem 'uglifier', '>= 1.3.0'
-gem 'unicorn', group: :production
+gem 'sass-rails'
+gem 'uglifier'
 gem 'rails_12factor', group: :production
 gem 'rack-ssl'
 
@@ -18,16 +17,13 @@ group :doc do
 end
 
 group :development do
-  gem 'foreman', '~> 0.63.0'
+  gem 'foreman'
   gem 'sqlite3'
   gem 'puma'
 end
 
 group :development, :test do
-  gem 'capybara', '~> 2.1.0'
-  gem 'rspec-rails', '~> 2.13.1'
-  gem 'shoulda', '~> 3.5.0'
+  gem 'seed_dump'
   gem 'growl'
-  gem 'guard-rspec'
   gem 'guard-brakeman'
 end
