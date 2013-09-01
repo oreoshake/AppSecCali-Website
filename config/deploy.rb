@@ -25,4 +25,4 @@ namespace :deploy do
   end
 end
 
-run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+# sudo "rvmsudo bundle install", :as => 'neil.matatall', :sudo => "/home/neil.matatall/.rvm/bin/rvmsudo"
