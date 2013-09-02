@@ -19,8 +19,24 @@ body {
   padding-top: 50px;
 }
 
+.actions {
+  text-align: right;
+}
+
+input[type=text], textarea {
+  width:500px;
+}
+
 .sidebar-nav {
   padding: 9px 0;
+}
+
+.field {
+  padding: 15px;
+}
+
+.control-label {
+  padding-right: 30px;
 }
 
 .field_with_errors label {

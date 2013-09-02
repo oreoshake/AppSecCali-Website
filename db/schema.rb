@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902074021) do
+ActiveRecord::Schema.define(version: 20130902091717) do
 
   create_table "beta_requests", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20130902074021) do
     t.boolean  "confirmed",      default: false
     t.text     "abstract"
     t.string   "website"
+    t.boolean  "training"
   end
 
 end

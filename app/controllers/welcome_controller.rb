@@ -4,6 +4,10 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def training
+		@speakers = Speaker.all
+	end
+
 	def index
 		@beta_request = BetaRequest.new
 	end
