@@ -15,8 +15,6 @@ gem 'rvm-capistrano'
 gem 'dalli'
 gem 'unicorn'
 gem 'newrelic_rpm'
-gem 'actionpack-page_caching'
-
 
 group :doc do
   gem 'sdoc', require: false
@@ -33,7 +31,10 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'guard-brakeman'
   gem 'guard-rspec'
+  gem 'spork', '~> 1.0rc3'
+  gem 'guard-spork'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'capybara'
+  gem 'better_errors'
 end

@@ -1,6 +1,4 @@
 class WelcomeController < ApplicationController
-	caches_page :location, :training, :code_of_conduct, :contact
-
 	def training
 		@speakers = Speaker.all
 	end
