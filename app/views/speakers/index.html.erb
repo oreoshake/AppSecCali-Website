@@ -8,7 +8,7 @@
           <div class="row-fluid">
 <% @speakers.where(:confirmed => true).shuffle.each_with_index do |speaker, index| -%>
             <div class="span4">
-              <h2><%= speaker.name %></h2>
+              <h3><%= speaker.name %></h3>
               <p><%= truncate speaker.bio %></p>
               <p><%= link_to 'More', speaker, :class => 'btn' %></p>
             </div><!--/span-->
