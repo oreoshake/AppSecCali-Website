@@ -11,7 +11,7 @@ gem 'uglifier'
 gem 'rails_12factor', group: :production
 gem 'rack-ssl'
 gem 'secure_headers'
-gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'dalli'
 gem 'unicorn'
 gem 'newrelic_rpm'
