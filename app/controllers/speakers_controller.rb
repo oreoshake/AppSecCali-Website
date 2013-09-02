@@ -1,4 +1,6 @@
 class SpeakersController < ApplicationController
+  caches_page :show
+
   http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF', :except => [:cfp, :new, :create, :index, :show]
 
   before_action :set_speaker, only: [:show, :edit, :update, :destroy]

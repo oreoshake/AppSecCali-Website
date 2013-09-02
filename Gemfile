@@ -15,6 +15,8 @@ gem 'rvm-capistrano'
 gem 'dalli'
 gem 'unicorn'
 gem 'newrelic_rpm'
+gem 'actionpack-page_caching'
+
 
 group :doc do
   gem 'sdoc', require: false

@@ -1,7 +1,5 @@
 class WelcomeController < ApplicationController
-	def location
-
-	end
+	caches_page :location, :training, :code_of_conduct, :contact
 
 	def training
 		@speakers = Speaker.all
@@ -9,10 +7,6 @@ class WelcomeController < ApplicationController
 
 	def index
 		@beta_request = BetaRequest.new
-	end
-
-	def code_of_conduct
-
 	end
 
   def splash
