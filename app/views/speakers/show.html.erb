@@ -1,18 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<p><%= image_tag @speaker.image_url %></p>
 <p>
-  <strong>Name:</strong>
-  <%= @speaker.name %>
+  <h1><%= @speaker.name %></h1>
 </p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag @speaker.image_url %>
-</p>
-
 <p>
   <strong>Twitter handle:</strong>
-  <%= link_to "https://twitter.com/" + @speaker.twitter_handle %>
+  <%= link_to @speaker.twitter_handle, "https://twitter.com/" + @speaker.twitter_handle %>
 </p>
 
 <p>
@@ -25,5 +18,9 @@
   <%= @speaker.company %>
 </p>
 
-<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
-<%= link_to 'Back', speakers_path %>
+<p>
+  <strong>Bio:</strong>
+  <%= @speaker.bio %>
+</p>
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %>

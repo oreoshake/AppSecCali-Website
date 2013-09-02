@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Your name' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -28,7 +28,7 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
+    <%= f.label :image_url, 'Profile image url' %><br>
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
@@ -44,6 +44,6 @@
     <%= f.text_field :company %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit' %>
   </div>
 <% end %>
