@@ -14,6 +14,7 @@ gem 'secure_headers'
 gem 'capistrano'
 gem 'dalli'
 gem 'unicorn'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
