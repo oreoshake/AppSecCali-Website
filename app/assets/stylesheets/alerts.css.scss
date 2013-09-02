@@ -129,9 +129,9 @@
   margin-top: 0;
 }
 .alert-message a {
-  font-weight: bold;
+  font-weight: bolder;
   color: #404040;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .alert-message.danger p a, .alert-message.error p a, .alert-message.success p a, .alert-message.info p a {
   color: #ffffff;

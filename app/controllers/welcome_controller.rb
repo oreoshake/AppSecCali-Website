@@ -11,6 +11,10 @@ class WelcomeController < ApplicationController
 		@beta_request = BetaRequest.new
 	end
 
+	def code_of_conduct
+
+	end
+
   def splash
     @beta_request = BetaRequest.new
     render :splash, :layout => 'splash'
