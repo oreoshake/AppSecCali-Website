@@ -1,3 +1,5 @@
 <% @beta_requests.each do |r| %>
+<div>
 	<%= r.name %> - <%= hide_email(r.email) %>
+</div>
 <% end %>
