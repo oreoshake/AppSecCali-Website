@@ -56,6 +56,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dalli (2.6.4)
     dotenv (0.9.0)
     erubis (2.7.0)
     execjs (2.0.1)
@@ -194,6 +195,7 @@ DEPENDENCIES
   bootstrap-sass
   capistrano
   coffee-rails
+  dalli
   foreman
   growl
   guard-brakeman

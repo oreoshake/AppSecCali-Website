@@ -12,6 +12,7 @@ gem 'rails_12factor', group: :production
 gem 'rack-ssl'
 gem 'secure_headers'
 gem 'capistrano'
+gem 'dalli'
 
 group :doc do
   gem 'sdoc', require: false
