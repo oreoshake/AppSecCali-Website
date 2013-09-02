@@ -22,4 +22,4 @@ production:
   database: appsec_california_2014_production
   pool: 5
   username: appsec_california_2014
-  password: <%= `cat password` %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
