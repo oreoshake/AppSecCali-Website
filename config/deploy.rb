@@ -9,13 +9,18 @@ set :deploy_to, "/var/www"
 set :scm, "git"
 set :user, "neil.matatall"  # The server's user for deploys
 set :application, "appsec_california_2014"
-set :repository,  "https://github.com/oreoshake/AppSecCali-Website.git"
+set :repository,  "git@github.com:oreoshake/AppSecCali-Website.git"
 set :branch, "master"
 set :use_sudo, true
+# server "162.209.14.65", :app, :web, :db, :primary => true
+set :deploy_via, :checkout
+
 role :app, "162.209.14.65"
 role :assets, "162.209.14.65"
 role :web, "162.209.14.65"
 role :db, "162.209.14.65", :primary => true
+set :ssh_options, { :forward_agent => true }
+
 
 set :rvm_ruby_string, 'ruby-2.0.0-p195'
 set :rvm_bin_path, "/home/neil.matatall/.rvm/bin/"
@@ -30,7 +35,7 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
-after "deploy:update_code", "deploy:copy"
+# after "deploy:update_code", "deploy:copy"
 # after "deploy:update_code", "deploy:migrate"
 # after "deploy:update", "newrelic:notice_deployment"
 

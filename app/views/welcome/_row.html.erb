@@ -1,6 +1,6 @@
 
     <div class="span3">
-      <p><a href="https://twitter.com/<%= speaker.twitter_handle%>"><img src="<%= speaker.image_url %>"  width="73" height="73"></a></p>
+      <p><%= link_to image_tag(speaker.image_url, :height => 73, :width => 73), speaker %></p>
       <a href="https://twitter.com/<%= speaker.twitter_handle%>" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow <%= speaker.name %></a>
       <p><strong><%= speaker.name%></strong>, <em><%=speaker.title %>, <%=speaker.company %></em></p>
     </div>
