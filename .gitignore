@@ -4,6 +4,7 @@
 capybara-*.html
 .rspec
 /.bundle
+/secrets
 /vendor/bundle
 /log/*
 /tmp/*
