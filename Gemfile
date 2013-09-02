@@ -13,6 +13,7 @@ gem 'rack-ssl'
 gem 'secure_headers'
 gem 'capistrano'
 gem 'dalli'
+gem 'unicorn'
 
 group :doc do
   gem 'sdoc', require: false
