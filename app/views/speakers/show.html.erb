@@ -27,9 +27,11 @@
 
 <p>
   <strong>Bio:</strong>
-  <pre>
-  <%= @speaker.bio %>
-  </pre>
+  <blockquote>
+    <pre>
+      <%= @speaker.bio %>
+    </pre>
+  </blockquote>
 </p>
 
 <%= link_to 'Edit', edit_speaker_path(@speaker) %>
