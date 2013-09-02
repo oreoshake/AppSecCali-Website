@@ -11,16 +11,14 @@
   <meta name="author" content="OWASP California">
 </head>
 <body>
-<% [:notice, :error, :alert].each do |level| %>
-  <% unless flash[level].blank? %>
-    <div class="alert <%= flash_class(level) %>">
-      <a class="close" href="#">×</a>
-      <%= content_tag :p, flash[level] %>
-    </div>
-  <% end %>
-<% end %>
-
   <div class="container">
+  <% [:notice, :error, :alert].each do |level| %>
+    <% unless flash[level].blank? %>
+      <div class="alert-message <%= flash_class(level) %>">
+        <%= content_tag :p, flash[level] %>
+      </div>
+    <% end %>
+  <% end %>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">

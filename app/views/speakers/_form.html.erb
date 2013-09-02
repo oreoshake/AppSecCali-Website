@@ -12,43 +12,45 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, 'Your name', :class => "control-label" %>
+    <%= f.label :name, 'Your name', :class => "control-label lead required" %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :abstract, :class => "control-label"  %>
-    <%= f.text_area :abstract %>
-  </div>
-  <div class="field">
-    <%= f.label :training, "Is this a training submission?", :class => "control-label"  %>
-    <%= f.check_box :training %>
-  </div>
-  <div class="field" style="clear:both">
-    <%= f.label :bio, :class => "control-label"  %>
-    <%= f.text_area :bio %>
-  </div>
-  <div class="field">
-    <%= f.label :website, :class => "control-label"  %>
-    <%= f.text_area :website %>
-  </div>
-  <div class="field">
-    <%= f.label :email, :class => "control-label"  %>
+    <%= f.label :email, :class => "control-label lead required"  %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :image_url, 'Profile image url', :class => "control-label"  %>
+    <%= f.label :abstract, :class => "control-label lead required"  %>
+    <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :training, "Is this for training?", :class => "control-label lead"  %>
+    <div class="make-switch">
+      <%= f.check_box :training %>
+    </div>
+  </div>
+  <div class="field" style="clear:both">
+    <%= f.label :bio, :class => "control-label lead bigbox"  %>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :website, :class => "control-label lead"  %>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url, 'Profile image url', :class => "control-label lead"  %>
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
-    <%= f.label :twitter_handle, :class => "control-label"  %>
+    <%= f.label :twitter_handle, :class => "control-label lead"  %>
     <%= f.text_field :twitter_handle %>
   </div>
   <div class="field">
-    <%= f.label :title, :class => "control-label"  %>
+    <%= f.label :title, :class => "control-label lead"  %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :company, :class => "control-label"  %>
+    <%= f.label :company, :class => "control-label lead"  %>
     <%= f.text_field :company %>
   </div>
   <div class="actions jumbotron">

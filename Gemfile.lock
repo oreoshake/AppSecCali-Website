@@ -50,6 +50,12 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capybara (2.1.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -59,6 +65,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     dalli (2.6.4)
+    diff-lcs (1.2.4)
     dotenv (0.9.0)
     erubis (2.7.0)
     execjs (2.0.1)
@@ -78,6 +85,9 @@ GEM
     guard-brakeman (0.8.1)
       brakeman (>= 2.1.1)
       guard (>= 1.1.0)
+    guard-rspec (3.0.2)
+      guard (>= 1.8)
+      rspec (~> 2.13)
     haml (4.0.3)
       tilt
     highline (1.6.19)
@@ -98,6 +108,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.9)
     net-scp (1.1.2)
@@ -108,6 +119,8 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     newrelic_rpm (3.6.6.147)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -148,6 +161,21 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rspec-rails (2.13.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
     ruby2ruby (2.0.6)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
@@ -165,8 +193,13 @@ GEM
       rdoc (~> 3.10)
     secure_headers (1.0.0)
       brwsr (>= 1.1.1)
-    seed_dump (0.6.0)
     sexp_processor (4.3.0)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.1.5)
+    shoulda-matchers (2.3.0)
+      activesupport (>= 3.0.0)
     slim (2.0.1)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -198,6 +231,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -205,11 +240,13 @@ PLATFORMS
 DEPENDENCIES
   actionpack-page_caching
   bootstrap-sass
+  capybara
   coffee-rails
   dalli
   foreman
   growl
   guard-brakeman
+  guard-rspec
   jquery-rails
   newrelic_rpm
   pg (~> 0.15.1)
@@ -217,11 +254,13 @@ DEPENDENCIES
   rack-ssl
   rails (~> 4.0.0)
   rails_12factor
+  rb-fsevent
+  rspec-rails
   rvm-capistrano
   sass-rails
   sdoc
   secure_headers
-  seed_dump
+  shoulda
   sqlite3
   uglifier
   unicorn

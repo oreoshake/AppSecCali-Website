@@ -31,7 +31,8 @@ class SpeakersController < ApplicationController
     @speaker = Speaker.new(speaker_params)
 
     if @speaker.save
-      redirect_to @speaker, notice: 'Speaker was successfully created.'
+      flash[:notice] = "Thanks for submitting!"
+      redirect_to @speaker
     else
       render action: 'new'
     end

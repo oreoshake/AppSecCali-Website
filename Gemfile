@@ -29,7 +29,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'seed_dump'
   gem 'growl'
+  gem 'rb-fsevent'
   gem 'guard-brakeman'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'capybara'
 end

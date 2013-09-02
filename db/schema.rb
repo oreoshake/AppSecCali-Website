@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20130902091717) do
     t.string   "company"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "confimred",      default: false
     t.boolean  "confirmed",      default: false
     t.text     "abstract"
     t.string   "website"
