@@ -8,7 +8,7 @@
           <div class="row-fluid">
 <% @speakers.where(:confirmed => true).where(:training => false).shuffle.each_with_index do |speaker, index| -%>
             <div class="span6">
-              <p><%= image_tag speaker.image_url, :height => 73, :width => 73 %></p>
+              <p><%= link_to(image_tag(speaker.image_url, :height => 73, :width => 73), speaker) %></p>
               <h3><%= link_to speaker.name, speaker %></h3>
               <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
             </div><!--/span-->
