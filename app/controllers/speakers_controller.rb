@@ -1,11 +1,14 @@
 class SpeakersController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF'
+  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF', :except => [:cfp, :new, :create, :index, :show]
 
   before_action :set_speaker, only: [:show, :edit, :update, :destroy]
 
   # GET /speakers
   def index
     @speakers = Speaker.all
+  end
+
+  def cfp
   end
 
   # GET /speakers/1

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppSec California 2014 - Surf, Sand, and Security</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= csrf_meta_tags %>
+  <meta name="twitter:widgets:csp" content="on">
+  <%= favicon_link_tag 'favicon.ico' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OWASP AppSec California">
+  <meta name="author" content="OWASP California">
+</head>
+<body>
+<% [:notice, :error, :alert].each do |level| %>
+  <% unless flash[level].blank? %>
+    <div class="alert <%= flash_class(level) %>">
+      <a class="close" href="#">×</a>
+      <%= content_tag :p, flash[level] %>
+    </div>
+  <% end %>
+<% end %>
+
+  <div class="container-narrow">
+    <%= yield %>
+
+    <div class="footer">
+      <p>&copy; <%= brand_name %> 2013</p>
+    </div>
+  </div>
+
+  <%= javascript_include_tag "application" %>
+</body>
+</html>

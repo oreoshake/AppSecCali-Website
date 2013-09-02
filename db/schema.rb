@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901232446) do
+ActiveRecord::Schema.define(version: 20130902062156) do
 
   create_table "beta_requests", force: true do |t|
     t.string   "name"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20130901232446) do
     t.string   "company"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "confimred",      default: false
+    t.boolean  "confirmed",      default: false
+    t.text     "abstract"
   end
 
 end

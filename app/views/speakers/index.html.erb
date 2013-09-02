@@ -1,37 +1,28 @@
-<h1>Listing speakers</h1>
+<div class="lead"><%=link_to 'CFP', cfp_speakers_path %> is open until October 15, 2013.</div>
 
-<table border=1>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Image url</th>
-      <th>Twitter handle</th>
-      <th>Title</th>
-      <th>Company</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= link_to 'Submit Abstract', new_speaker_path, :class => 'btn btn-primary' %>
 
-  <tbody>
-    <% @speakers.each do |speaker| %>
-      <tr>
-        <td><%= speaker.name %></td>
-        <td><%= mail_to speaker.email %></td>
-        <td><%= image_tag speaker.image_url %></td>
-        <td><%= link_to "https://twitter.com/" + speaker.twitter_handle %></td>
-        <td><%= speaker.title %></td>
-        <td><%= speaker.company %></td>
-        <td><%= link_to 'Show', speaker %></td>
-        <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
-        <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>Confirmed Speakers</h1>
+      <div class="row-fluid">
+        <div class="span9">
+          <div class="row-fluid">
+<% @speakers.where(:confirmed => true).shuffle.each_with_index do |speaker, index| -%>
+            <div class="span4">
+              <h2><%= speaker.name %></h2>
+              <p><%= truncate speaker.bio %></p>
+              <p><%= link_to 'More', speaker, :class => 'btn' %></p>
+            </div><!--/span-->
+  <% if (index + 1) % 3 == 0 -%>
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+      <div class="row-fluid">
+        <div class="span9">
+          <div class="row-fluid">
+  <% end -%>
+<% end -%>
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
 
-<br>
 
-<%= link_to 'New Speaker', new_speaker_path %>

@@ -1,6 +1,13 @@
 RecruitLy::Application.routes.draw do
-  resources :speakers
+  resources :speakers do |speaker|
+  	collection do
+  		get :cfp
+  	end
+  end
 
+  get :location, :controller => :welcome
+  get :splash, :controller => :welcome
+  get :contact, :controller => :welcome
   root 'welcome#index'
 
   resources :beta_requests, only: [:create, :index]
