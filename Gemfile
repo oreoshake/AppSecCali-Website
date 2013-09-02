@@ -13,7 +13,7 @@ gem 'rack-ssl'
 gem 'secure_headers'
 gem 'rvm-capistrano'
 gem 'dalli'
-gem 'unicorn'
+# gem 'unicorn'
 gem 'newrelic_rpm'
 
 group :doc do
