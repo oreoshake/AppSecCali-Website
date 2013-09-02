@@ -121,7 +121,7 @@ GEM
     newrelic_rpm (3.6.6.147)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    pg (0.15.1)
+    pg (0.16.0)
     polyglot (0.3.3)
     puma (2.5.1)
       rack (>= 1.1, < 2.0)
@@ -229,6 +229,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-jdbcmysql-adapter
   better_errors
   bootstrap-sass
   capybara
@@ -240,8 +241,9 @@ DEPENDENCIES
   guard-rspec
   guard-spork
   jquery-rails
+  jruby-openssl
   newrelic_rpm
-  pg (~> 0.15.1)
+  pg
   puma
   rack-ssl
   rails (~> 4.0.0)

@@ -5,7 +5,7 @@ gem 'rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'pg', '~> 0.15.1'
+
 gem 'sass-rails'
 gem 'uglifier'
 gem 'rails_12factor', group: :production
@@ -13,8 +13,16 @@ gem 'rack-ssl'
 gem 'secure_headers'
 gem 'rvm-capistrano'
 gem 'dalli'
-# gem 'unicorn'
 gem 'newrelic_rpm'
+
+platforms :mri do
+  gem 'pg'
+end
+
+platforms :jruby do
+  gem 'jruby-openssl'
+  gem 'activerecord-jdbcmysql-adapter'
+end
 
 group :doc do
   gem 'sdoc', require: false
