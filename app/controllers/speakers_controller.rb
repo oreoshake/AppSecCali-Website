@@ -5,6 +5,7 @@ class SpeakersController < ApplicationController
 
   # GET /speakers
   def index
+    raise 'error'
     puts "HI"
     @speakers = Speaker.all
   end
