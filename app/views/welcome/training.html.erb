@@ -7,7 +7,7 @@
             <div class="span6">
               <p><%= image_tag speaker.image_url%></p>
               <h3><%= link_to speaker.name, speaker %></h3>
-              <p>Training Material: <%= speaker.title %></p>
+              <p>Training Material: <%= speaker.abstract %></p>
               <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
             </div><!--/span-->
   <% if (index + 1) % 2 == 0 -%>
