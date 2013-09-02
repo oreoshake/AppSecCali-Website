@@ -24,3 +24,12 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-26802093-2', 'appseccalifornia.org');
 ga('send', 'pageview');
+
+var fragment = window.location.hash;
+if (fragment === '#cfp') {
+	window.location = '/speakers/cfp';
+}
+
+if (fragment === '#speakers') {
+	window.location = '/speakers';
+}
