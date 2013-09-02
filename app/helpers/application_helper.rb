@@ -1,6 +1,13 @@
 module ApplicationHelper
+  def twitter_url(handle)
+    "https://twitter.com/#{handle}"
+  end
+
   def brand_name
-    'OWASP OC, OWASP LA, OWASP Bay Area, OWASP Santa Barbara'
+    [link_to("OWASP OC", twitter_url('owaspoc')),
+      link_to("OWASP LA", twitter_url('owaspla')),
+      link_to("OWASP Bay Area", twitter_url('owaspbayarea')),
+      "OWASP Santa Barbara"].join(" ").html_safe
   end
 
   def flash_class(level)
@@ -9,5 +16,9 @@ module ApplicationHelper
     when :error then "error"
     when :alert then "warning"
     end
+  end
+
+  def hide_email(email)
+    email[0] + "..." + email[email.index('@') - 1] + "@" + email[email.index("@") + 1] + "..."+ email[email.rindex('.') - 1..-1]
   end
 end

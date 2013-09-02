@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-
 	def location
 
 	end
@@ -14,7 +13,6 @@ class WelcomeController < ApplicationController
 
   def splash
     @beta_request = BetaRequest.new
-    @speakers = Speaker.all
     render :splash, :layout => 'splash'
   end
 end
