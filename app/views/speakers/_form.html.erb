@@ -1,11 +1,11 @@
 <%= form_for(@speaker, :html => {:class=>"form-horizontal"}) do |f| %>
   <% if @speaker.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-error">
       <h2><%= pluralize(@speaker.errors.count, "error") %> prohibited this speaker from being saved:</h2>
 
       <ul>
       <% @speaker.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li>* <%= msg %></li>
       <% end %>
       </ul>
     </div>
@@ -55,5 +55,8 @@
   </div>
   <div class="actions jumbotron">
     <%= f.submit 'Submit', :class => 'btn btn-primary' %>
+  </div>
+  <div class="field row-fluid">
+    <p>(Note: You will not receive a confirmation email)
   </div>
 <% end %>
