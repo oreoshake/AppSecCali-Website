@@ -226,7 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-jdbcmysql-adapter
+  activerecord-jdbcpostgresql-adapter
   better_errors
   bootstrap-sass
   capybara

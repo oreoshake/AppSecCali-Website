@@ -21,7 +21,7 @@ end
 
 platforms :jruby do
   gem 'jruby-openssl'
-  gem 'activerecord-jdbcmysql-adapter'
+  gem 'activerecord-jdbcpostgresql-adapter'
 end
 
 group :doc do
