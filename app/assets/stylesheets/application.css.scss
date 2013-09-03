@@ -27,8 +27,29 @@
   @extend .error;
  }
 
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+
+ footer {
+  position: relative;
+  height: 150px;
+  clear:both;
+  padding-top:100px;
+}
+
 body {
-  padding-bottom: 80px;
+
   padding-top: 50px;
 }
 

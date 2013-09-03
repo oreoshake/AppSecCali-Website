@@ -1,5 +1,5 @@
 <h1>Training</h1>
-
+<h4>The following trainers will be providing training on Jan 29<sup>th</sup>. Location TBD.</h4>
       <div class="row-fluid">
         <div class="span9">
           <div class="row-fluid">
@@ -9,8 +9,7 @@
               <h3><%= link_to speaker.name, speaker %></h3>
               <p><%= speaker.title %></p>
               <p><%= speaker.company %></p>
-              <p>Training Material: <%= speaker.abstract %></p>
-              <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
+              <p><strong>Training Material: <%= speaker.abstract %></strong></p>
             </div><!--/span-->
   <% if (index + 1) % 2 == 0 -%>
           </div><!--/row-->
