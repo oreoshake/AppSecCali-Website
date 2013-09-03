@@ -1,7 +1,7 @@
 language: ruby
+before_script:
+  - psql -c 'create database appsec_california_2014_test;' -U postgres
 rvm:
   - 2.0.0
-  - 1.9.3
-  - jruby-19mode
   - ruby-head
   - jruby-head
