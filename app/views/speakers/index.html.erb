@@ -1,24 +1,18 @@
 <h1>Confirmed Speakers</h1>
-      <div class="row-fluid">
         <div class="span9">
           <div class="row-fluid">
 <% @speakers.where(:confirmed => true).where(:training => false).shuffle.each_with_index do |speaker, index| -%>
             <div class="span6">
-              <p><%= link_to(image_tag(speaker.image_url, :height => 73), speaker) %></p>
+              <p><%= link_to(image_tag(speaker.image_url, :style => 'height: 150px'), speaker) %></p>
               <h3><%= link_to speaker.name, speaker %></h3>
               <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
             </div><!--/span-->
   <% if (index + 1) % 2 == 0 -%>
           </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
-      <div class="row-fluid">
-        <div class="span9">
           <div class="row-fluid">
   <% end -%>
 <% end -%>
           </div><!--/row-->
         </div><!--/span-->
-      </div><!--/row-->
 
 
