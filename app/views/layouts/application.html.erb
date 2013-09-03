@@ -5,7 +5,10 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= csrf_meta_tags %>
   <meta name="twitter:widgets:csp" content="on">
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'favicon.png', :type => 'image/x-icon' %>
+  <%= favicon_link_tag 'favicon.png'%>
+  <%= favicon_link_tag 'favicon.png', :rel => 'apple-touch-icon', :type => 'image/png' %>
+  <meta content="<%= asset_path('favicon.png') %>" itemprop="image">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OWASP AppSec California">
   <meta name="author" content="OWASP California">
