@@ -20,7 +20,7 @@ platforms :mri do
 end
 
 platforms :jruby do
-  gem 'jruby-openssl'
+  # gem 'jruby-openssl'
   gem 'activerecord-jdbcpostgresql-adapter'
 end
 
