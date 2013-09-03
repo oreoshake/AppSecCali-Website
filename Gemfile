@@ -30,8 +30,6 @@ end
 
 group :development do
   gem 'foreman'
-  gem 'sqlite3', :platform => :mri
-  gem 'puma'
 end
 
 group :development, :test do
