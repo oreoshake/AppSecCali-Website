@@ -11,45 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :name, 'Your name', :class => "control-label lead required" %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :email, :class => "control-label lead required"  %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :placeholder => "Not shared with anyone"  %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :abstract, :class => "control-label lead required"  %>
     <%= f.text_area :abstract %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :training, "Is this for training?", :class => "control-label lead"  %>
     <div class="make-switch">
       <%= f.check_box :training %>
     </div>
   </div>
-  <div class="field" style="clear:both">
+  <div class="field row-fluid" style="clear:both">
     <%= f.label :bio, :class => "control-label lead bigbox"  %>
-    <%= f.text_area :bio %>
+    <%= f.text_area :bio, :placeholder => "Displayed on your profile page"  %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :website, :class => "control-label lead"  %>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, :placeholder => "blog, home page, etc."  %>
   </div>
-  <div class="field">
-    <%= f.label :image_url, 'Profile image url', :class => "control-label lead", :placeholder => "https:// urls only"  %>
-    <%= f.text_field :image_url %>
+  <div class="field row-fluid">
+    <%= f.label :image_url, 'Profile image url', :class => "control-label lead" %>
+    <%= f.text_field :image_url, :placeholder => "https:// urls only" %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :twitter_handle, :class => "control-label lead"  %>
-    <%= f.text_field :twitter_handle %>
+    <%= f.text_field :twitter_handle, :placeholder => "@ sign optional"  %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :title, :class => "control-label lead"  %>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="field row-fluid">
     <%= f.label :company, :class => "control-label lead"  %>
     <%= f.text_field :company %>
   </div>
