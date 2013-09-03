@@ -30,8 +30,8 @@
               , classes = $element.attr('class')
               , color
               , moving
-              , onLabel = "ON"
-              , offLabel = "OFF"
+              , onLabel = "YES"
+              , offLabel = "NO"
               , icon = false
               , textLabel = false;
 
