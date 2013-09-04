@@ -49,11 +49,10 @@
         </div>
       </div>
     </div>
-
-    <%= render 'shared/cfp_banner' unless request.original_url =~ /#{cfp_speakers_path}/ %>
-
+    <%= image_tag 'banner.png', :style=>"margin: 0; width: 100%" %>
     <div class="container-fluid">
-      <div class="row-fluid">
+      <%= render 'shared/cfp_banner' unless request.original_url =~ /#{cfp_speakers_path}/ %>
+      <div class="row-fluid" style="margin-top:-10px;">
         <div class="span9">
           <%= yield %>
         </div>
