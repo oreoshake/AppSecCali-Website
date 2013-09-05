@@ -19,6 +19,7 @@
   <meta property="og:image"           content="http://rlv.zcache.com/owasp_logo_stickers_small-r84e815260d0a4b82b13c55fc0b1d9778_v9waf_8byvr_512.jpg" />
 </head>
 <body>
+  <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet', :style => 'width:100%'%>
   <div class="container">
   <% [:notice, :error, :alert].each do |level| %>
     <% unless flash[level].blank? %>
@@ -55,9 +56,8 @@
       </div>
     </div>
     <div class="container-fluid">
-      <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet', :style => 'margin-bottom: -30px' %>
       <%= render 'shared/cfp_banner' unless request.original_url =~ /#{cfp_speakers_path}/ %>
-      <div class="row-fluid" style="margin-top:-10px;">
+      <div class="row-fluid" style="padding-top:40px;">
         <div class="span9">
           <%= yield %>
         </div>

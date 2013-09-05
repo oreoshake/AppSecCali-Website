@@ -1,4 +1,9 @@
-<h1>Confirmed Speakers</h1>
+        <h1>Confirmed Speakers</h1>
+
+        <div class="jumbotron">
+          <%= link_to 'Submit Abstract', new_speaker_path, :class => 'btn btn-primary' %>
+        </div>
+
         <div class="span9">
           <div class="row-fluid">
 <% @speakers.where(:confirmed => true).where(:training => false).shuffle.each_with_index do |speaker, index| -%>
