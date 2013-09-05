@@ -16,11 +16,12 @@
 
  @import 'bootstrap-responsive';
 
-body div.container {
+
+
+.container {
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px; /* or 950px */
-  width:100%;
 }
 
  #error_explanation {

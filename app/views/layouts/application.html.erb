@@ -20,7 +20,7 @@
 </head>
 <body>
   <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet', :style => 'width:100%'%>
-  <div class="container">
+  <div class="container" style="width:100%;">
   <% [:notice, :error, :alert].each do |level| %>
     <% unless flash[level].blank? %>
       <div class="alert-message <%= flash_class(level) %>">
