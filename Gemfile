@@ -14,6 +14,7 @@ gem 'secure_headers'
 gem 'rvm-capistrano'
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'sqlite3'
 
 platforms :mri do
   gem 'pg'

@@ -49,8 +49,8 @@
         </div>
       </div>
     </div>
-    <%= image_tag 'banner.png', :style=>"margin: 0; width: 100%", :class => 'hidden-phone hidden-tablet' %>
     <div class="container-fluid">
+      <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet' %>
       <%= render 'shared/cfp_banner' unless request.original_url =~ /#{cfp_speakers_path}/ %>
       <div class="row-fluid" style="margin-top:-10px;">
         <div class="span9">
