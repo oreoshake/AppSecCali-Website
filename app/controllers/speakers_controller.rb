@@ -13,7 +13,7 @@ class SpeakersController < ApplicationController
   # GET /speakers/1
   def show
     @speaker = Speaker.find(params[:id])
-    raise ActionController::RoutingError.new('Not Found') unless @speaker.confirmed?
+    render(:status => 404) unless @speaker.confirmed?
   end
 
   # GET /speakers/new

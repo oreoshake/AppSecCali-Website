@@ -14,6 +14,20 @@ feature "A speaker submits a proposal" do
     expect(speaker.email).to eq 'jdoe@example.com'
   end
 
+  scenario "non-confirmed speakers should not be visible" do
+    keanu = Speaker.create!(:name => "Test", :email => "test@test.com", :abstract => "woah")
+    visit(speaker_path(keanu.reload))
+    page.status_code.should == 404
+  end
+
+  scenario "non-confirmed speakers should not be visible" do
+    keanu = Speaker.new(:name => "Test", :email => "test@test.com", :abstract => "woah")
+    keanu.confirmed = true
+    keanu.save!
+    visit(speaker_path(keanu.reload))
+    page.status_code.should == 200
+  end
+
   scenario "with valid missing parameters" do
     visit new_speaker_path
     click_button "Submit"
