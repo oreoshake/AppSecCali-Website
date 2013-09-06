@@ -17,7 +17,7 @@ feature "A speaker submits a proposal" do
   scenario "non-confirmed speakers should not be visible" do
     keanu = Speaker.create!(:name => "Test", :email => "test@test.com", :abstract => "woah")
     visit(speaker_path(keanu.reload))
-    page.status_code.should == 404
+    page.status_code.should_not == 200
   end
 
   scenario "non-confirmed speakers should not be visible" do

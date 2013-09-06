@@ -10,8 +10,9 @@ describe SpeakersController do
 
 		it "has a 404 status code if not confirmed" do
 			Speaker.should_receive(:find).and_return(double(:confirmed? => false))
-      get :show, :id => 1
-      expect(response.status).to eq(404)
+			expect {
+      	get :show, :id => 1
+      }.to raise_error(ActiveRecord::RecordNotFound)
     end    
 	end
 end	

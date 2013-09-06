@@ -13,7 +13,7 @@ class SpeakersController < ApplicationController
   # GET /speakers/1
   def show
     @speaker = Speaker.find(params[:id])
-    raise ActionController::RoutingError.new('Not Found') unless @speaker.confirmed?
+    raise ActiveRecord::RecordNotFound .new('Not Found') unless @speaker.confirmed?
   end
 
   # GET /speakers/new
@@ -31,7 +31,7 @@ class SpeakersController < ApplicationController
 
     if @speaker.save
       flash[:notice] = "Thanks for submitting!"
-      redirect_to root
+      redirect_to root_path
     else
       render action: 'new'
     end
