@@ -3,11 +3,11 @@ development:
   database: db/development.sqlite3
   pool: 5
   timeout: 5000
+  
 test:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  pool: 5
-  timeout: 5000  
+  adapter: postgresql
+  encoding: unicode
+  database: appsec_california_2014_test
 
 production:
   adapter: postgresql
