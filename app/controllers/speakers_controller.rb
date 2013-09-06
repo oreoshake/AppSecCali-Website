@@ -1,6 +1,6 @@
 class SpeakersController < ApplicationController
   http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF', :except => [:cfp, :new, :create, :index, :show]
-  before_action :set_speaker, only: [:show, :edit, :update, :destroy]
+  before_action :set_speaker, only: [:edit, :update, :destroy]
 
   # GET /speakers
   def index
@@ -12,6 +12,8 @@ class SpeakersController < ApplicationController
 
   # GET /speakers/1
   def show
+    @speaker = Speaker.find(params[:id])
+    raise ActionController::RoutingError.new('Not Found') unless @speaker.confirmed?
   end
 
   # GET /speakers/new
@@ -29,7 +31,7 @@ class SpeakersController < ApplicationController
 
     if @speaker.save
       flash[:notice] = "Thanks for submitting!"
-      redirect_to @speaker
+      redirect_to root
     else
       render action: 'new'
     end
