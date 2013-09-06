@@ -2,8 +2,10 @@
 <p>
   <h1><%= @speaker.name %></h1>
 </p>
+<% if @speaker.twitter_handle %>
 <p><a href="https://twitter.com/<%=@speaker.twitter_handle%>" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow <%= @speaker.twitter_handle %></a></p>
 <p>
+<% end %>
 <% if @speaker.website.present? %>
   <strong>Website:</strong>
   <%= link_to @speaker.website, @speaker.website %>
