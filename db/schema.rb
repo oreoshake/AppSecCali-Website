@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902091717) do
+ActiveRecord::Schema.define(version: 20130907183339) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "beta_requests", force: true do |t|
     t.string   "name"
@@ -19,6 +22,8 @@ ActiveRecord::Schema.define(version: 20130902091717) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "beta_requests", ["id"], name: "index_beta_requests_on_id", using: :btree
 
   create_table "speakers", force: true do |t|
     t.string   "name"
@@ -35,5 +40,8 @@ ActiveRecord::Schema.define(version: 20130902091717) do
     t.string   "website"
     t.boolean  "training"
   end
+
+  add_index "speakers", ["id"], name: "index_speakers_on_id", using: :btree
+  add_index "speakers", ["twitter_handle"], name: "index_speakers_on_twitter_handle", using: :btree
 
 end
