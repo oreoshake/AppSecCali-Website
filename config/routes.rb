@@ -10,6 +10,7 @@ RecruitLy::Application.routes.draw do
   get :contact, :controller => :welcome
   get :training, :controller => :welcome
   get :code_of_conduct, :controller => :welcome
+  get :privacy, :controller => :welcome
   root 'welcome#index'
 
   resources :beta_requests, only: [:create, :index]
