@@ -20,6 +20,7 @@
   <meta property="og:image"           content="http://rlv.zcache.com/owasp_logo_stickers_small-r84e815260d0a4b82b13c55fc0b1d9778_v9waf_8byvr_512.jpg" />
 </head>
 <body>
+  <!-- we send emails with sendgrid -->
   <script type="application/json" id="growl-data">
     <%= [:notice, :error, :warning].reject {|level| flash[level].blank?}.map {|level| {level => flash[level]}}.to_json %>
   </script>
