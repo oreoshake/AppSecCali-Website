@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.0.0'
 gem 'bootstrap-sass'
-gem 'coffee-rails'
 gem 'jquery-rails'
-
 gem 'sass-rails'
 gem 'uglifier'
 gem 'rails_12factor', group: :production
@@ -32,6 +30,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'binding_of_caller'
   gem 'growl'
   gem 'rb-fsevent'
   gem 'guard-brakeman'
