@@ -196,6 +196,9 @@ GEM
       rdoc (~> 3.10)
     secure_headers (1.0.0)
       brwsr (>= 1.1.1)
+    sendgrid (1.2.0)
+      json
+      json
     sexp_processor (4.3.0)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
@@ -262,6 +265,7 @@ DEPENDENCIES
   sass-rails
   sdoc
   secure_headers
+  sendgrid
   shoulda
   spork (~> 1.0rc3)
   uglifier
