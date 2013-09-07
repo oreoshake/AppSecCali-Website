@@ -13,3 +13,6 @@ module RecruitLy
     end
   end
 end
+
+# rely on html encoding them and parsing ourselves
+ActiveSupport.escape_html_entities_in_json = false

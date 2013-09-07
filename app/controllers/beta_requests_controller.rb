@@ -3,10 +3,10 @@ class BetaRequestsController < ApplicationController
     beta_request = BetaRequest.new(beta_request_params)
 
     if beta_request.save
-      flash[:notice] = "Thanks for signing up!"
+      flash[:notice] = "Thanks for signing up! Note: You will not receive a confirmation email."
       redirect_to root_path
     else
-      flash[:error] = beta_request.errors.full_messages.to_sentence
+      flash[:warning] = beta_request.errors.full_messages.to_sentence
       redirect_to :back
     end
   end

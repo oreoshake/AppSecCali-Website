@@ -35,3 +35,12 @@ if (fragment === '#cfp') {
 if (fragment === '#speakers') {
 	window.location = '/speakers';
 }
+
+$(document).ready(function() {
+  var growlData = JSON.parse($('<div/>').html($('script#growl-data').text()).text());
+  $.each(growlData, function(index, growl) {
+    var level = Object.keys(growl)[0];
+    var message = growl[Object.keys(growl)[0]];
+    $.growl({"message":$('<div/>').html(message).text(),"style":level,"title":level});
+  });
+});
