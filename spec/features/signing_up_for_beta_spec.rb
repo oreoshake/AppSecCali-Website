@@ -7,7 +7,6 @@ feature "A user signing up for a beta invitation" do
     fill_in "Email", with: "jdoe@example.com"
     click_button "Sign up for announcements"
 
-    expect(page).to have_content('Thanks for signing up!')
     beta_request = BetaRequest.last
     expect(beta_request.name).to eq 'John Doe'
     expect(beta_request.email).to eq 'jdoe@example.com'

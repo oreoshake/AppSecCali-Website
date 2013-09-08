@@ -12,7 +12,6 @@ feature "A speaker submits a proposal" do
   scenario "with valid parameters" do
     submit
 
-    expect(page).to have_content('Thanks for submitting!')
     speaker = Speaker.last
     expect(speaker.name).to eq 'John Doe'
     expect(speaker.email).to eq 'jdoe@example.com'
