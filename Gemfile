@@ -31,7 +31,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'binding_of_caller'
+  gem 'binding_of_caller', :platform => :mri
   gem 'growl'
   gem 'rb-fsevent'
   gem 'guard-brakeman'
