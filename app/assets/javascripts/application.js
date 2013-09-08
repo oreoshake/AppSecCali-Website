@@ -1,32 +1,12 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
-//
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require bootstrap-dropdown
+//= require bootstrap-alert
+//= require bootstrap-collapse
 //= require_tree .
 
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-26802093-2', 'appseccalifornia.org');
-ga('send', 'pageview');
-
+// redirect from old #-based links that are in some tweets
 var fragment = window.location.hash;
 if (fragment === '#cfp') {
 	window.location = '/speakers/cfp';
@@ -36,28 +16,53 @@ if (fragment === '#speakers') {
 	window.location = '/speakers';
 }
 
+// twitter widget code
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+// google analytics initializaer
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-26802093-2', 'appseccalifornia.org');
+ga('send', 'pageview');
+
+var track = function(event) {
+	ga('send', 'event', 'submission', event);
+};
+
+track("page load");
+
 $(document).ready(function() {
-	$('.dropdown-menu a').click(function(e) {
-    e.stopPropagation();
-	});
+	track('document ready');
 
 	$('#new_beta_request').on('submit', function(e) {
-		ga('send', 'event', 'submission', 'newsletter');
-
-	  // ga.push(['_trackEvent', 'Submissions', 'Newsletter']);
-	  console.log("EVENT")
+		track('newsletter');
 	});
 
 	$('a[href="/speakers/new"]').on('click', function(e) {
-		// ga.push(['_trackEvent', 'Submissions', 'CFP start']);
-		ga('send', 'event', 'submission', 'cfp start');
-		console.log("EVENT")
+		track('cfp start');
 	});	
 
 	$('#new_speaker').on('submit', function(e) {
-		console.log("EVENT")
-		ga('send', 'event', 'submission', 'cfp submit');
-	  // ga.push(['_trackEvent', 'Submissions', 'CFP Submit']);
+		track('cfp submit');
+	});
+
+	$('span.icon-bar').on('submit', function(e) {
+		track('mobile menu expand');
+	});
+
+	$('#beta_request_name').on('click', function(e) {
+		ga('send', 'event', 'submission', 'newsletter start name');
+	});
+
+	$('#beta_request_email').on('click', function(e) {
+		ga('send', 'event', 'submission', 'newsletter start email');
+	});
+
+	$('#new_speaker input').on('click', function(e) {
+		track('cfp start fill');
 	});
 
   var growlData = JSON.parse($('<div/>').html($('script#growl-data').text()).text());

@@ -14,17 +14,16 @@
  *= require 'bootstrap-responsive'
  */
 
- @import 'bootstrap-responsive';
-
-
+@import 'bootstrap';
+@import 'bootstrap-responsive';
 
 .container {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1600px; /* or 950px */
+  max-width: 1600px;
 }
 
- #error_explanation {
+#error_explanation {
   color: #f00;
   ul {
     list-style: none;
@@ -35,7 +34,7 @@
 .field_with_errors {
   @extend .control-group;
   @extend .error;
- }
+}
 
 html, body {
   height: 100%;
@@ -50,8 +49,7 @@ html, body {
   padding-bottom:150px; /* this needs to be bigger than footer height*/
 }
 
-
- footer {
+footer {
   position: relative;
   height: 150px;
   clear:both;
@@ -65,6 +63,7 @@ body {
 label.required {
     font-weight: bold;
 }
+
 label.required:after {
     color: #e32;
     content: '*';

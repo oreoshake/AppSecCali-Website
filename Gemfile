@@ -18,7 +18,6 @@ platforms :mri do
 end
 
 platforms :jruby do
-  # gem 'jruby-openssl'
   gem 'activerecord-jdbcpostgresql-adapter'
 end
 
@@ -31,10 +30,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'binding_of_caller', :platform => :mri
+  gem 'binding_of_caller', platform: :mri
+  gem 'guard-brakeman'
+  gem 'better_errors'
   gem 'growl'
   gem 'rb-fsevent'
-  gem 'guard-brakeman'
   gem 'guard-rspec'
   gem 'spork', '~> 1.0rc3'
   gem 'guard-spork'
@@ -42,5 +42,4 @@ group :development, :test do
   gem 'shoulda'
   gem 'capybara'
   gem 'poltergeist'
-  gem 'better_errors'
 end
