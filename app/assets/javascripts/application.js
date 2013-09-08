@@ -37,6 +37,29 @@ if (fragment === '#speakers') {
 }
 
 $(document).ready(function() {
+	$('.dropdown-menu a').click(function(e) {
+    e.stopPropagation();
+	});
+
+	$('#new_beta_request').on('submit', function(e) {
+		ga('send', 'event', 'submission', 'newsletter');
+
+	  // ga.push(['_trackEvent', 'Submissions', 'Newsletter']);
+	  console.log("EVENT")
+	});
+
+	$('a[href="/speakers/new"').on('click', function(e) {
+		// ga.push(['_trackEvent', 'Submissions', 'CFP start']);
+		ga('send', 'event', 'submission', 'cfp start');
+		console.log("EVENT")
+	});	
+
+	$('#new_speaker').on('submit', function(e) {
+		console.log("EVENT")
+		ga('send', 'event', 'submission', 'cfp submit');
+	  // ga.push(['_trackEvent', 'Submissions', 'CFP Submit']);
+	});
+
   var growlData = JSON.parse($('<div/>').html($('script#growl-data').text()).text());
   $.each(growlData, function(index, growl) {
     var level = Object.keys(growl)[0];
