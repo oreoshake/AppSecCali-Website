@@ -1,5 +1,6 @@
 /*
  *= require_self
+ *= require 'bootstrap-responsive'
  *= require 'bootstrap-switch'
  *= require 'jquery.growl'
  *= require 'alerts'
@@ -24,22 +25,22 @@
 @import "bootstrap/tables";
 
 // Components: common
-@import "bootstrap/sprites";
+//@import "bootstrap/sprites";
 @import "bootstrap/dropdowns";
-// @import "bootstrap/wells";
+//@import "bootstrap/wells";
 @import "bootstrap/component-animations";
 @import "bootstrap/close";
 
 // Components: Buttons & Alerts
 @import "bootstrap/buttons";
-// @import "bootstrap/button-groups";
-// @import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+//@import "bootstrap/button-groups";
+//@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
 
 // Components: Nav
 @import "bootstrap/navs";
 @import "bootstrap/navbar";
 // @import "bootstrap/breadcrumbs";
-// @import "bootstrap/pagination";
+@import "bootstrap/pagination";
 // @import "bootstrap/pager";
 
 // Components: Popovers
@@ -58,7 +59,6 @@
 
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
-
 
 @import 'bootstrap-responsive';
 
