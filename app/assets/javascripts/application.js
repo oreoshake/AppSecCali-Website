@@ -48,7 +48,7 @@ $(document).ready(function() {
 	  console.log("EVENT")
 	});
 
-	$('a[href="/speakers/new"').on('click', function(e) {
+	$('a[href="/speakers/new"]').on('click', function(e) {
 		// ga.push(['_trackEvent', 'Submissions', 'CFP start']);
 		ga('send', 'event', 'submission', 'cfp start');
 		console.log("EVENT")
