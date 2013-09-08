@@ -30,15 +30,11 @@ group :development do
   gem 'foreman'
 end
 
-group :development do
+group :development, :test do
   gem 'binding_of_caller', :platform => :mri
-  gem 'guard-brakeman'
-  gem 'better_errors'
-end
-
-group :test do
   gem 'growl'
   gem 'rb-fsevent'
+  gem 'guard-brakeman'
   gem 'guard-rspec'
   gem 'spork', '~> 1.0rc3'
   gem 'guard-spork'
@@ -46,4 +42,5 @@ group :test do
   gem 'shoulda'
   gem 'capybara'
   gem 'poltergeist'
+  gem 'better_errors'
 end
