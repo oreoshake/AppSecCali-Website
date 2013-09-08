@@ -22,7 +22,7 @@
   <script type="application/json" id="growl-data">
     <%= [:notice, :error, :warning].reject {|level| flash[level].blank?}.map {|level| {level => flash[level]}}.to_json %>
   </script>
-  <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet', :style => 'width:100%'%>
+  <%= image_tag 'banner.png', :class => 'hidden-phone hidden-tablet', :id => 'banner'%>
   <div class="container" style="width:100%;">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">

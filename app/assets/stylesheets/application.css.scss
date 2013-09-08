@@ -101,10 +101,6 @@ footer {
   padding-top:100px;
 }
 
-body {
-  padding-top: 40px;
-}
-
 label.required {
     font-weight: bold;
 }
@@ -184,4 +180,9 @@ label.required:after {
 
 .marketing p + h4 {
   margin-top: 28px;
+}
+
+#banner {
+  width:100%; 
+  padding-top:40px
 }
