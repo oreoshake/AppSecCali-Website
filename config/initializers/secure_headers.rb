@@ -1,4 +1,5 @@
 SecureHeaders::Configuration.configure do |config|
+  config.hsts = {:max_age => 20.years.to_i, :include_subdomains => true}
   config.csp = {
   	:default_src => 'self https:',
   	:script_src => 'self http://www.google-analytics.com https://www.google-analytics.com https://platform.twitter.com http://platform.twitter.com https://*.twimg.com http://*.twimg.com',
