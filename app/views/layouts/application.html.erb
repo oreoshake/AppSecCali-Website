@@ -73,6 +73,11 @@
     </footer>
   </div>
 
-  <%= javascript_include_tag "application", :async => true %>
+  <% if Brwsr::Browser.new(:ua => request.env['HTTP_USER_AGENT']).ie? %>
+    <%= javascript_tag(raw Rails.application.assets['application.js'].to_s) %>
+  <% else %>
+    <%= javascript_include_tag "application", :async => true %>
+  <% end %>
+
 </body>
 </html>
