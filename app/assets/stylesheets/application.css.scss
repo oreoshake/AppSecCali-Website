@@ -111,6 +111,10 @@ label.required:after {
     display:inline;
 }
 
+p.asterisk {
+  color: #e32;
+}
+
 .field textarea {
   height: 100px;
 }
@@ -183,7 +187,7 @@ label.required:after {
 }
 
 #banner {
-  width:100%; 
+  width:100%;
   padding-top:40px
 }
 
