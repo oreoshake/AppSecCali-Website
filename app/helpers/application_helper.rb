@@ -7,8 +7,7 @@ module ApplicationHelper
     [link_to("OWASP OC", twitter_url('owaspoc')),
       link_to("OWASP LA", twitter_url('owaspla')),
       link_to("OWASP Santa Barbara", 'https://www.owasp.org/index.php/Santa_Barbara'),
-      link_to("OWASP Bay Area", twitter_url('owaspbayarea')),
-      "OWASP Santa Barbara"].join(" ").html_safe
+      link_to("OWASP Bay Area", twitter_url('owaspbayarea'))].join(" ").html_safe
   end
 
   def flash_class(level)
