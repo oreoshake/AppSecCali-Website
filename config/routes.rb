@@ -1,4 +1,11 @@
 RecruitLy::Application.routes.draw do
+  resources :mailers, :only => [] do |mailer|
+    collection do
+      get :newsletter
+      post :deliver
+    end
+  end
+
   resources :speakers do |speaker|
   	collection do
   		get :cfp

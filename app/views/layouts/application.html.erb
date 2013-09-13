@@ -2,12 +2,10 @@
 <html>
 <head>
   <title>AppSec California 2014 - Surf, Sand, and Security</title>
+  <%= stylesheet_link_tag 'application' %>
   <!-- we send emails with sendgrid -->
   <meta name="twitter:widgets:csp" content="on">
   <meta property="twitter:account_id" content="4503599627397241" />
-  <style type="text/css" media="all">
-    <%= raw Rails.application.assets['application.css'].to_s %>
-  </style>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png', :type => 'image/x-icon' %>
   <%= favicon_link_tag 'favicon.png'%>
@@ -76,11 +74,7 @@
     </footer>
   </div>
 
-  <% if Brwsr::Browser.new(:ua => request.env['HTTP_USER_AGENT']).ie? %>
-    <%= javascript_tag(raw Rails.application.assets['application.js'].to_s) %>
-  <% else %>
-    <%= javascript_include_tag "application", :async => true %>
-  <% end %>
+  <%= javascript_include_tag "application" %>
 
 </body>
 </html>

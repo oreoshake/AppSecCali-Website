@@ -1,10 +1,7 @@
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-dropdown
-//= require bootstrap-alert
-//= require bootstrap-collapse
+//= require bootstrap
 //= require_tree .
-
 
 // redirect from old #-based links that are in some tweets
 var fragment = window.location.hash;

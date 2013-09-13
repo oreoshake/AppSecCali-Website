@@ -1,0 +1,12 @@
+<h1>Yo, heads up, you're sending this to <%= pluralize(@emails.count, 'person') %>. </h1>
+
+<%= form_tag 'deliver', method: :post, id: :mailer do -%>
+  <%= hidden_field_tag :type, :newsletter %>
+  Subject: <%= text_field_tag :subject, '' %>
+  <%= text_area_tag :body, '', class: 'large' %>
+<% end %>
+<iframe src="about:blank" id="frame" width="100%" height="400px"></iframe>
+
+<div class="jumbotron">
+  <button class="btn-primary btn">Send emails.</button>
+</div>

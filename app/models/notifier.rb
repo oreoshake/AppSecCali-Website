@@ -20,4 +20,14 @@ class Notifier < ActionMailer::Base
     mail( to: email,
       subject: 'Thanks for joining signing up for the newsletter.' )
   end
+
+  def newsletter(subject, body, emails)
+    Rails.logger.info("Sending email to " + emails.count.to_s)
+    attachments.inline['banner.jpg'] = File.read(Rails.root.join('app/assets/images/banner_small.png'))
+    @body = body
+    emails << "neil.matatall@gmail.com"
+    sendgrid_recipients([ "neil.matatall@gmail.com"])
+    sendgrid_subscriptiontrack_text(:replace => '|unsubscribe_link|')
+    mail(subject: subject )
+  end
 end
