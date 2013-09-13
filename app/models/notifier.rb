@@ -18,7 +18,7 @@ class Notifier < ActionMailer::Base
     sendgrid_recipients ["neil.matatall@gmail.com", email]
     sendgrid_subscriptiontrack_text(:replace => '|unsubscribe_link|')
     mail( to: email,
-      subject: 'Thanks for joining signing up for the newsletter.' )
+      subject: 'Thanks for signing up for the newsletter.' )
   end
 
   def newsletter(subject, body, emails)
