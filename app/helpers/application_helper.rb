@@ -4,8 +4,8 @@ module ApplicationHelper
   end
 
   def brand_name
-    [link_to("OWASP OC", twitter_url('owaspoc')),
-      link_to("OWASP LA", twitter_url('owaspla')),
+    [link_to("OWASP OC", 'http://www.meetup.com/OWASP-OC/'),
+      link_to("OWASP LA", 'http://www.meetup.com/OWASP-Los-Angeles/'),
       link_to("OWASP Santa Barbara", 'https://www.owasp.org/index.php/Santa_Barbara'),
       link_to("OWASP Bay Area", twitter_url('owaspbayarea'))].join(" ").html_safe
   end
