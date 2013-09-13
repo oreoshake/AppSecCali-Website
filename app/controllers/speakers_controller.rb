@@ -34,6 +34,7 @@ class SpeakersController < ApplicationController
 
     if @speaker.save
       flash[:notice] = "Thanks for submitting!"
+      Notifier.cfp_submission(@speaker).deliver
       redirect_to root_path
     else
       render action: 'new'
