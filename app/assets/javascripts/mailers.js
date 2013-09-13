@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#mailer .jumbotron button').click(function() {
+  $('#mailer-submit').click(function() {
     var response = confirm("Are you suuuuuuuuuure?????");
     if(response === true) {
       $('#mailer').submit();
