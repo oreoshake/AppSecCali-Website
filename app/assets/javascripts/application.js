@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 	$('a[href="/speakers/new"]').on('click', function(e) {
 		track('cfp start');
-	});	
+	});
 
 	$('#new_speaker').on('submit', function(e) {
 		track('cfp submit');
