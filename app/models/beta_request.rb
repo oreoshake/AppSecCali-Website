@@ -1,2 +1,2 @@
-class BetaRequest
+class BetaRequest < ActiveRecord::Base
 end
