@@ -1,6 +1,8 @@
 class SpeakersController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF', :except => [:cfp, :new, :create, :index, :show, :privacy]
+  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'], :except => [:cfp, :new, :create, :index, :show, :privacy]
   before_action :set_speaker, only: [:edit, :update, :destroy]
+  before_filter :setup_mailchimp, only: [:create]
+  CFP_LIST_ID = 'e9e26c9eb4'
 
   # GET /speakers
   def index
@@ -31,11 +33,10 @@ class SpeakersController < ApplicationController
   # POST /speakers
   def create
     @speaker = Speaker.new(speaker_params)
-
-    if @speaker.save
+    if @speaker.save && subscribe(CFP_LIST_ID, @speaker.email, @speaker.name)
       flash[:notice] = "Thanks for submitting!"
       Notifier.cfp_submission(@speaker).deliver
-      redirect_to root_path
+      redirect_to :back
     else
       render action: 'new'
     end

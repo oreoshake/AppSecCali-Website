@@ -1,18 +1,19 @@
 class BetaRequestsController < ApplicationController
+  before_filter :setup_mailchimp, only: :create
+  NEWSLETTER_ID = '551468a674'
+
   def create
     beta_request = BetaRequest.new(beta_request_params)
 
-    if beta_request.save
-      Notifier.newletter_signup(beta_request.email).deliver
+    if subscribe(NEWSLETTER_ID, beta_request.email, beta_request.name)
       flash[:notice] = "Thanks for signing up!"
       redirect_to root_path
     else
-      flash[:warning] = beta_request.errors.full_messages.to_sentence
       redirect_to :back
     end
   end
 
-  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'] || 'ASDF', :except => :create
+  http_basic_authenticate_with name: "admin", password: ENV['ADMIN_PASSWORD'], :except => :create
 
   def index
     @beta_requests = BetaRequest.all

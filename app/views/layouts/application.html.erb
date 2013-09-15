@@ -63,6 +63,7 @@
         </div>
         <div class="span3">
           <div class="well sidebar-nav">
+            <%= link_to(image_tag('logo_placeholder.png'), sponsorship_path) %>
             <a class="twitter-timeline" href="https://twitter.com/AppSecCali" data-widget-id="374419775272673280">Tweets by @AppSecCali</a>
           </div><!--/.well -->
         </div><!--/span-->
@@ -73,8 +74,6 @@
       <p>&copy; <%= brand_name %> 2013</p>
     </footer>
   </div>
-
-  <%= javascript_include_tag "application" %>
-
+  <%= javascript_include_tag "application", async: Rails.env.production? %>
 </body>
 </html>

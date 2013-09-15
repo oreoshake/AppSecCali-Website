@@ -11,6 +11,7 @@ gem 'secure_headers'
 gem 'rvm-capistrano'
 gem 'dalli'
 gem 'newrelic_rpm'
+gem 'mailchimp-api', require: 'mailchimp'
 
 platforms :mri do
   gem 'pg'
