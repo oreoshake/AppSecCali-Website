@@ -17,8 +17,6 @@ feature "A user signing up for a beta invitation" do
     fill_in "Name", with: "John Doe"
     fill_in "Email", with: "jdoe@example.com"
     click_button "Sign up for announcements"
-
-    expect(page).to have_content('')
     expect(BetaRequest.count).to eq 1
   end
 end

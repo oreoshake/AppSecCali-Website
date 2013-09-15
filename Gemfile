@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'sendgrid'
 gem 'rails', '~> 4.0.0'
 gem 'bootstrap-sass'
-gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'rails_12factor', group: :production
