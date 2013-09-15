@@ -36,7 +36,7 @@ class SpeakersController < ApplicationController
     if @speaker.save && subscribe(CFP_LIST_ID, @speaker.email, @speaker.name)
       flash[:notice] = "Thanks for submitting!"
       Notifier.cfp_submission(@speaker).deliver
-      redirect_to :back
+      redirect_to root_path
     else
       render action: 'new'
     end
