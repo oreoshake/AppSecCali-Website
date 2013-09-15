@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 feature "A speaker submits a proposal" do
+  before do
+    @lists = double
+    mc = double(:lists => @lists)
+    Mailchimp::API.stub(:new).and_return(mc)
+  end
+
   def submit
     visit new_speaker_path
     fill_in "speaker_name", with: "John Doe"
@@ -10,6 +16,7 @@ feature "A speaker submits a proposal" do
   end
 
   scenario "with valid parameters" do
+    @lists.should_receive(:subscribe)
     submit
     speaker = Speaker.last
     expect(speaker.name).to eq 'John Doe'
@@ -28,12 +35,6 @@ feature "A speaker submits a proposal" do
     keanu.save!
     visit(speaker_path(keanu.reload))
     page.status_code.should == 200
-  end
-
-  scenario "already submitted" do
-    keanu = Speaker.create!(:name => "John Doe", :email => "jdoe@example.com", :abstract => "lol")
-    submit
-    expect(page).to have_content("You have already submitted to the CFP. Thanks!")
   end
 
   scenario "with missing parameters" do
