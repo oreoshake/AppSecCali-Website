@@ -5,10 +5,11 @@ class ApplicationController < ActionController::Base
 private
 
   def setup_mailchimp
-    @mailchimp = Mailchimp::API.new(ENV['MAILCHIMP_PASSWORD'])
+    @mailchimp = Mailchimp::API.new(ENV['MAILCHIMP_PASSWORD']) unless Rails.env.test?
   end
 
   def subscribe(id, email, name)
+    return true if Rails.env.test?
     name = name.split
     begin
       res = @mailchimp.lists.subscribe(id, {email: email}, {FNAME: name.first, LNAME: name.last})
