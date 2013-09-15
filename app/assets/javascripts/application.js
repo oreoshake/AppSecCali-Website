@@ -1,5 +1,7 @@
 //= require jquery-2.0.0
 //= require bootstrap
+//= require jquery.growl
+//= require bootstrapSwitch
 //= require_tree .
 
 // redirect from old #-based links that are in some tweets
