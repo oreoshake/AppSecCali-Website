@@ -35,7 +35,7 @@ class SpeakersController < ApplicationController
     @speaker = Speaker.new(speaker_params)
     if @speaker.save && subscribe(CFP_LIST_ID, @speaker.email, @speaker.name)
       flash[:notice] = "Thanks for submitting!"
-      Notifier.cfp_submission(@speaker).deliver
+      Notifier.cfp_submission(@speaker).deliver if Rails.env.production?
       redirect_to root_path
     else
       render action: 'new'
@@ -65,6 +65,6 @@ class SpeakersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def speaker_params
-      params.require(:speaker).permit(:name, :bio, :email, :image_url, :twitter_handle, :title, :company, :website, :training, :abstract)
+      params.require(:speaker).permit(:name, :bio, :email, :image_url, :twitter_handle, :title, :company, :website, :training, :abstract, :presentation_format)
     end
 end
