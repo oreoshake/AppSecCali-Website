@@ -16,7 +16,7 @@ private
       Rails.logger.info("mailchimp res: #{res.inspect}")
       return true
     rescue Mailchimp::ListAlreadySubscribedError
-      flash[:error] = "#{email} is already subscribed to the list"
+      return true
     rescue Mailchimp::Error, Mailchimp::ListInvalidImportError, Mailchimp::ListDoesNotExistError => ex
       Rails.logger.error("Unknown mailchimp error #{ex.message}")
       flash[:error] = "Something went wrong, you were not subscribed."
