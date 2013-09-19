@@ -8,7 +8,7 @@ class VolunteersController < ApplicationController
 
   def create
     volunteer = Volunteer.new(volunteer_params)
-    if subscribe(VOLUNTEER_LIST_ID, volunteer.email, volunteer.name)
+    if volunteer.save && subscribe(VOLUNTEER_LIST_ID, volunteer.email, volunteer.name)
       flash[:notice] = "Thanks for signing up!"
       redirect_to root_path
     else

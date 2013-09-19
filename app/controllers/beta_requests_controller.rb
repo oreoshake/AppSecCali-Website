@@ -5,7 +5,7 @@ class BetaRequestsController < ApplicationController
   def create
     beta_request = BetaRequest.new(beta_request_params)
 
-    if subscribe(NEWSLETTER_ID, beta_request.email, beta_request.name)
+    if beta_request.save && subscribe(NEWSLETTER_ID, beta_request.email, beta_request.name)
       flash[:notice] = "Thanks for signing up!"
       redirect_to root_path
     else
