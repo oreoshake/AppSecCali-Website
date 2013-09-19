@@ -7,7 +7,7 @@ feature "A user signing up for a beta invitation" do
     Mailchimp::API.stub(:new).and_return(mc)
   end
 
-  scenario "with valid parameters" do
+  it "with valid parameters" do
     @lists.should_receive(:subscribe)
 
     visit '/'

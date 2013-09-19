@@ -15,7 +15,7 @@ feature "A speaker submits a proposal" do
     click_button "Submit"
   end
 
-  scenario "with valid parameters" do
+  it "with valid parameters" do
     @lists.should_receive(:subscribe)
     submit
     speaker = Speaker.last
@@ -23,13 +23,13 @@ feature "A speaker submits a proposal" do
     expect(speaker.email).to eq 'jdoe@example.com'
   end
 
-  scenario "non-confirmed speakers should not be visible" do
+  it "non-confirmed speakers should not be visible" do
     keanu = Speaker.create!(:name => "Test", :email => "test@test.com", :abstract => "woah")
     visit(speaker_path(keanu.reload))
     page.status_code.should_not == 200
   end
 
-  scenario "non-confirmed speakers should not be visible" do
+  it "confirmed speakers should be visible" do
     keanu = Speaker.new(:name => "Test", :email => "test@test.com", :abstract => "woah")
     keanu.confirmed = true
     keanu.save!
@@ -37,7 +37,7 @@ feature "A speaker submits a proposal" do
     page.status_code.should == 200
   end
 
-  scenario "with missing parameters" do
+  it "with missing parameters" do
     visit new_speaker_path
     click_button "Submit"
 
