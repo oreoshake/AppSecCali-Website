@@ -46,6 +46,7 @@
                   <li><%= link_to 'Contact', contact_path %></li>
                   <li><%= link_to 'Privacy Policy', privacy_path %></li>
                   <li><%= link_to 'Code Of Conduct', code_of_conduct_path %></li>
+                  <li><%= link_to 'Volunteer', volunteers_path %></li>
                 </ul>
               </li>
             </ul>
@@ -62,7 +63,7 @@
           <%= yield %>
         </div>
         <div class="span3">
-          <div class="well sidebar-nav">
+          <div class="well sidebar-nav" style="background-color: #333;">
             <%= link_to(image_tag('logo_placeholder.png'), sponsorship_path) %>
             <a class="twitter-timeline" href="https://twitter.com/AppSecCali" data-widget-id="374419775272673280">Tweets by @AppSecCali</a>
           </div><!--/.well -->

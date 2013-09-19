@@ -1,4 +1,7 @@
 RecruitLy::Application.routes.draw do
+  resources :volunteers, only: [:create, :index]
+  resources :beta_requests, only: [:create, :index]
+
   resources :speakers do |speaker|
   	collection do
   		get :cfp
@@ -14,6 +17,6 @@ RecruitLy::Application.routes.draw do
   get :sponsorship, :controller => :welcome
   root 'welcome#index'
 
-  resources :beta_requests, only: [:create, :index]
+
   post :csp_report, :controller => :csp
 end

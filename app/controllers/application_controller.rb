@@ -9,7 +9,7 @@ private
   end
 
   def subscribe(id, email, name)
-    return true if Rails.env.development?
+    # return true if Rails.env.development?
     name = name.split
     begin
       res = @mailchimp.lists.subscribe(id, {email: email}, {FNAME: name.first, LNAME: name.last})

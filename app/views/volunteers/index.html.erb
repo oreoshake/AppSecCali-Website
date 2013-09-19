@@ -1,0 +1,35 @@
+<div class="row-fluid">
+  <div class="span6">
+    <h3>
+      Benefits of volunteering
+    </h3>
+    <ul>
+      <li>Free entry.</li>
+      <li>Free food.</li>
+      <li>Free everything else that everyone else is getting for free.</li>
+      <li>Chances to connect with attendees and volunteers.</li>
+      <li>A cool and fun experience.</li>
+    </ul>
+  </div>
+
+  <div class="span6">
+    <h3>
+      Duties
+    </h3>
+    <ul>
+      <li>Registration booth.</li>
+      <li>Speaker liason.</li>
+      <li>A/V.</li>
+      <li>General taking-care-of-business.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <%= form_for @volunteer, class: 'form-inline' do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :email, placeholder: "Email" %><br>
+    <%= f.button 'Sign up to volunteer', class: 'btn btn-primary' %>
+    <p>You will need to confirm you subscription to the volunteer mailing list.</p>
+  <% end -%>
+</div>
