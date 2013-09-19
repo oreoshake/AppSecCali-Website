@@ -37,7 +37,7 @@ feature "A speaker submits a proposal" do
     page.status_code.should == 200
   end
 
-  it "with missing parameters" do
+  it "with invalid parameters" do
     visit new_speaker_path
     click_button "Submit"
 

@@ -1,10 +1,10 @@
 require 'spec_helper'
 require 'net/http'
 
-describe "Keeping the haxors out" do
+describe "Basic authentication" do
 	http_auth = ActionController::HttpAuthentication::Basic.encode_credentials('fail', 'fail')
 
-	it "protects with basic authentication" do
+	it "protects sensitive pages" do
 		[beta_requests_path, edit_speaker_path(1)].each do |path|
 	  	get path, 'HTTP_AUTHORIZATION' => http_auth
 	  	response.status.should == 401
