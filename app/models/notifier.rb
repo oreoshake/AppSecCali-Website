@@ -3,12 +3,12 @@ class Notifier < ActionMailer::Base
   sendgrid_enable   :subscriptiontrack
   sendgrid_category :use_subject_lines
 
-  default :from => "owasp-cali-planners@appseccalifornia.org"
+  default :from => "owasp-cali-planners@owasp.org"
 
   def cfp_submission(speaker)
-    sendgrid_recipients ["owasp-cali-planners@appseccalifornia.org"]
+    sendgrid_recipients ["owasp-cali-planners@owasp.org"]
     @speaker = speaker
-    mail( to: "owasp-cali-planners@appseccalifornia.org",
+    mail( to: "owasp-cali-planners@owasp.org",
       subject: 'Your CFP submission has been received.' )
   end
 end
