@@ -1,4 +1,8 @@
 class WelcomeController < ApplicationController
+  def registration
+    @beta_request = BetaRequest.new
+  end
+
 	def training
 		@speakers = Speaker.all
 	end

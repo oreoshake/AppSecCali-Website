@@ -1,0 +1,10 @@
+<p>Registration is not yet available. Fill out the form below to be notified when registration is open.</p>
+
+<div class="jumbotron">
+  <%= form_for @beta_request, class: 'form-inline' do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :email, placeholder: "Email" %><br>
+    <%= f.button 'Email me when registration is available.', class: 'btn btn-primary' %>
+    <p>Your email address will not be given to anyone.</p>
+  <% end -%>
+</div>

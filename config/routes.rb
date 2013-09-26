@@ -15,6 +15,7 @@ RecruitLy::Application.routes.draw do
   get :code_of_conduct, :controller => :welcome
   get :privacy, :controller => :welcome
   get :sponsorship, :controller => :welcome
+  get :registration, :controller => :welcome
   root 'welcome#index'
 
 
