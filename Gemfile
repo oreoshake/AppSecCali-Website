@@ -21,6 +21,7 @@ platforms :jruby do
   gem 'activerecord-jdbcpostgresql-adapter'
 end
 
+
 group :doc do
   gem 'sdoc', require: false
 end
