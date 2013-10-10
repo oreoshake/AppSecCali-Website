@@ -7,7 +7,7 @@ class Notifier < ActionMailer::Base
 
   def cfp_submission(speaker)
     return true if Rails.env.development?
-    sendgrid_recipients ["owasp-cali-planners@owasp.org"]
+    sendgrid_recipients ["owasp-cali-planners@owasp.org", speaker.email]
     @speaker = speaker
     mail( to: "owasp-cali-planners@owasp.org",
       subject: 'Your CFP submission has been received.' )
