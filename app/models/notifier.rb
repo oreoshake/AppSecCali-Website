@@ -6,6 +6,7 @@ class Notifier < ActionMailer::Base
   default :from => "owasp-cali-planners@owasp.org"
 
   def cfp_submission(speaker)
+    return true if Rails.env.development?
     sendgrid_recipients ["owasp-cali-planners@owasp.org"]
     @speaker = speaker
     mail( to: "owasp-cali-planners@owasp.org",

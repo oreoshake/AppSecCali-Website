@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919015823) do
+ActiveRecord::Schema.define(version: 20131010070603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20130919015823) do
     t.string   "website"
     t.boolean  "training"
     t.string   "presentation_format"
+    t.string   "comments"
   end
 
   add_index "speakers", ["id"], name: "index_speakers_on_id", using: :btree

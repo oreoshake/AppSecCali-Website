@@ -37,15 +37,15 @@
   </div>
   <div class="field row-fluid" style="clear:both">
     <%= f.label :bio, :class => "control-label lead bigbox"  %>
-    <%= f.text_area :bio, :placeholder => "Displayed on your profile page"  %>
+    <%= f.text_area :bio %>
   </div>
   <div class="field row-fluid">
     <%= f.label :website, :class => "control-label lead"  %>
-    <%= f.text_field :website, :placeholder => "blog, home page, etc."  %>
+    <%= f.text_field :website %>
   </div>
   <div class="field row-fluid">
     <%= f.label :image_url, 'Profile image url', :class => "control-label lead" %>
-    <%= f.text_field :image_url, :placeholder => "https:// urls only" %>
+    <%= f.text_field :image_url %>
   </div>
   <div class="field row-fluid">
     <%= f.label :twitter_handle, :class => "control-label lead"  %>
@@ -58,6 +58,10 @@
   <div class="field row-fluid">
     <%= f.label :company, :class => "control-label lead"  %>
     <%= f.text_field :company %>
+  </div>
+  <div class="field row-fluid">
+    <%= f.label :comments, :class => "control-label lead"  %>
+    <%= f.text_field :comments, :placeholder => "anything that doesn't fit in any of the above fields." %>
   </div>
   <div class="actions jumbotron">
     <%= f.submit 'Submit', :class => 'btn btn-primary' %>
