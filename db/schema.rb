@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010070603) do
+ActiveRecord::Schema.define(version: 20131014232828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,21 +26,21 @@ ActiveRecord::Schema.define(version: 20131010070603) do
   add_index "beta_requests", ["id"], name: "index_beta_requests_on_id", using: :btree
 
   create_table "speakers", force: true do |t|
-    t.string   "name"
+    t.text     "name"
     t.text     "bio"
-    t.string   "email"
-    t.string   "image_url"
-    t.string   "twitter_handle"
-    t.string   "title"
-    t.string   "company"
+    t.text     "email"
+    t.text     "image_url"
+    t.text     "twitter_handle"
+    t.text     "title"
+    t.text     "company"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "confirmed",           default: false
     t.text     "abstract"
     t.string   "website"
     t.boolean  "training"
-    t.string   "presentation_format"
-    t.string   "comments"
+    t.text     "presentation_format"
+    t.text     "comments"
   end
 
   add_index "speakers", ["id"], name: "index_speakers_on_id", using: :btree
