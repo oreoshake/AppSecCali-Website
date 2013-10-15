@@ -34,9 +34,9 @@
           </button>
           <a class="brand" href="/">AppSec California 2014</a>
           <div class="nav-collapse collapse">
-		  
-		  
-		
+
+
+
             <ul class="nav">
               <li><%= link_to 'Speakers', speakers_path %></li>
               <li><%= link_to 'Call For Papers/Training', cfp_speakers_path %></li>
@@ -59,9 +59,7 @@
       </div>
     </div>
     <div class="container-fluid">
-     <div class="alert-message warning">
-        <p>Sponsorship information has been added to the <%= link_to 'sponsorship page', sponsorship_path%>! Download the sponsor packet <%= link_to 'here', '/AppSecCalifornia-Sponsors.pdf'%>.</p>
-      </div>
+      <%= render 'shared/cfp_banner' %>
       <div class="row-fluid">
         <div class="span9">
           <%= yield %>
