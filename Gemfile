@@ -21,9 +21,7 @@ platforms :jruby do
   gem 'activerecord-jdbcpostgresql-adapter'
 end
 
-platforms [:mswin, :mingw] do
-  gem 'sqlite3'
-end
+gem 'sqlite3', platform: [:mswin, :mingw]
 
 group :doc do
   gem 'sdoc', require: false

@@ -297,4 +297,5 @@ DEPENDENCIES
   sendgrid
   shoulda
   spork (~> 1.0rc3)
+  sqlite3
   uglifier

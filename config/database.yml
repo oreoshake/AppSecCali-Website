@@ -1,8 +1,6 @@
 <%
   require 'rbconfig'
-  is_windows = (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)
-
-  if is_windows
+  if RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/
 %>
 development:
   adapter: sqlite3
@@ -24,13 +22,13 @@ development:
   adapter: postgresql
   encoding: unicode
   database: appsec_california_2014_development
-<% end %>
-
 
 test:
   adapter: postgresql
   encoding: unicode
   database: appsec_california_2014_test
+
+<% end %>
 
 production:
   adapter: postgresql

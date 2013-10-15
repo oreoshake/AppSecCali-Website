@@ -48,9 +48,5 @@ feature "A speaker submits a proposal" do
     fill_in "Email", with: 'lol'
     click_button "Submit"
     expect(page).to have_content("Email is not an email")
-
-    fill_in "speaker_image_url", with: 'http://example.com'
-    click_button "Submit"
-    expect(page).to have_content("Image url is invalid")
   end
 end
