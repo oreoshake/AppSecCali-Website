@@ -59,6 +59,6 @@ class SpeakersController < ApplicationController
     end
 
     def speaker_params
-      params.require(:speaker).permit(:name, :bio, :email, :image_url, :twitter_handle, :title, :company, :website, :training, :abstract, :presentation_format, :comments)
+      params.require(:speaker).permit(:name, :bio, :email, :image_url, :twitter_handle, :title, :company, :website, :training, :abstract, :presentation_format, :comments, :presentation_title)
     end
 end

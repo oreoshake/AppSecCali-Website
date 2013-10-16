@@ -20,6 +20,10 @@
     <%= f.text_field :email, :placeholder => "Not shared with anyone"  %>
   </div>
   <div class="field row-fluid">
+    <%= f.label :presentation_title, :class => "control-label lead required"  %>
+    <%= f.text_field :presentation_title %>
+  </div>
+  <div class="field row-fluid">
     <%= f.label :abstract, :class => "control-label lead required"  %>
     <%= f.text_area :abstract %>
   </div>
