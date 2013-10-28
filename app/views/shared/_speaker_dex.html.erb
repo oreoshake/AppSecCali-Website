@@ -1,11 +1,16 @@
-<h4>Confirmed Speakers <a id="speakers" href="<%= speakers_path %>">(cont'd).</a></h4>
 
-<div class="row-fluid marketing pagination-centered">
-  <% Speaker.all.where(:confirmed => true).shuffle.each_with_index do |speaker, index| %>
-    <%= render :partial => 'row', :locals => {:speaker => speaker} %>
-    <% if (index + 1) % 4 == 0 %>
-</div>
-<div class="row-fluid marketing pagination-centered">
-    <% end %>
-  <% end %>
-</div>
+
+        <h4>Confirmed Speakers <a id="speakers" href="<%= speakers_path %>">(cont'd).</a></h14>
+          <div class="row-fluid">
+<% Speaker.where(:confirmed => true).shuffle.each_with_index do |speaker, index| -%>
+            <div class="span4">
+              <p><%= link_to(image_tag(speaker.image_url, :style => 'height: 150px'), speaker) %></p>
+              <h3><%= link_to speaker.name, speaker %></h3>
+              <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
+            </div><!--/span-->
+  <% if (index + 1) % 3 == 0 -%>
+          </div><!--/row-->
+          <div class="row-fluid">
+  <% end -%>
+<% end -%>
+        </div>
