@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def registration
-    @title = "Register now"
+    @title = "Register Now"
   end
 
 	def training
