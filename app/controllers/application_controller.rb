@@ -1,8 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   ensure_security_headers
+  before_filter :build_beta_request
+
+
 
 private
+
+  def build_beta_request
+    @beta_request = BetaRequest.new
+  end
 
   def setup_mailchimp
     @mailchimp = Mailchimp::API.new(ENV['MAILCHIMP_PASSWORD']) # unless Rails.env.test?

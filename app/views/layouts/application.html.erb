@@ -34,17 +34,14 @@
           </button>
           <a class="brand" href="/">AppSec California 2014</a>
           <div class="nav-collapse collapse">
-
-
-
             <ul class="nav">
-              <li><%= link_to 'Speakers', speakers_path %></li>
-              <li><%= link_to 'Call For Papers/Training', cfp_speakers_path %></li>
-              <li><%= link_to 'Location', location_path %></li>
-              <li><%= link_to 'Training', training_path %></li>
-              <li><%= link_to 'Sponsorship Opportunities', sponsorship_path %></li>
-              <li><%= link_to 'Registration', registration_path %></li>
-              <li class="dropdown hidden-phone hidden-tablet">
+              <li><%= nav_link 'Speakers', speakers_path %></li>
+              <li><%= nav_link 'Call For Papers/Training', cfp_speakers_path %></li>
+              <li><%= nav_link 'Location', location_path %></li>
+              <li><%= nav_link 'Training', training_path %></li>
+              <li><%= nav_link 'Sponsorship Opportunities', sponsorship_path %></li>
+              <li><%= nav_link 'Registration', registration_path %></li>
+              <li class="dropdown hidden-phone hidden-tablet <%= maybe_add_active_to_about %>">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to 'Contact', contact_path %></li>
@@ -65,7 +62,14 @@
           <%= yield %>
         </div>
         <div class="span3">
-          <div class="well sidebar-nav" style="background-color: #333;">
+          <div class="well sidebar-nav text-center sponsors" style="background-color: #333;">
+            <h3> Newsletter <h3>
+
+              <%= form_for @beta_request, class: 'form-inline' do |f| %>
+                <%= f.text_field :name, placeholder: "Name" %>
+                <%= f.text_field :email, placeholder: "Email" %><br>
+                <%= f.button 'Sign up for announcements', class: 'btn btn-primary' %>
+              <% end -%>
             <h3 class="sponsors text-center">Diamond Sponsor</h3>
             <%= link_to(image_tag('logo_placeholder.png'), sponsorship_path) %>
             <div class="text-center sponsors">
