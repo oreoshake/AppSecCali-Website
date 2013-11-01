@@ -24,7 +24,7 @@ module ApplicationHelper
   def nav_link(text, href, style = nil)
     klass = request.fullpath == href ? "active" : ""
     content_tag(:li, class: klass) do
-      link_to text, href, style: style
+      link_to text, href, style: style, id: text
     end
   end
 
