@@ -21,10 +21,10 @@ module ApplicationHelper
     end
   end
 
-  def nav_link(text, href)
+  def nav_link(text, href, style = nil)
     klass = request.fullpath == href ? "active" : ""
     content_tag(:li, class: klass) do
-      link_to text, href
+      link_to text, href, style: style
     end
   end
 

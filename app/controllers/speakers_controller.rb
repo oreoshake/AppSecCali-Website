@@ -5,6 +5,7 @@ class SpeakersController < ApplicationController
   CFP_LIST_ID = 'e9e26c9eb4'
 
   def index
+    @title = "Speakers - AppSec California 2014"
     @speakers = Speaker.all
   end
 
@@ -16,10 +17,13 @@ class SpeakersController < ApplicationController
 
   def show
     @speaker = Speaker.find(params[:id])
+    @title = "AppSec California 2014 - Speaker.name"
     raise ActiveRecord::RecordNotFound .new('Not Found') unless @speaker.confirmed?
+
   end
 
   def new
+    @title = "AppSec California 2014 CFP Submission"
     @speaker = Speaker.new
   end
 

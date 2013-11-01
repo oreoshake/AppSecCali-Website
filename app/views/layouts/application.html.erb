@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AppSec California 2014 - Surf, Sand, and Security</title>
+  <title><%= @title || "AppSec California 2014 - Surf, Sand, and Security" %></title>
   <%= stylesheet_link_tag 'application' %>
   <!-- we send emails with sendgrid -->
   <meta name="twitter:widgets:csp" content="on">
@@ -35,12 +35,12 @@
           <a class="brand" href="/">AppSec California 2014</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><%= nav_link 'Speakers', speakers_path %></li>
-              <li><%= nav_link 'Call For Papers/Training', cfp_speakers_path %></li>
-              <li><%= nav_link 'Location', location_path %></li>
-              <li><%= nav_link 'Training', training_path %></li>
-              <li><%= nav_link 'Sponsorship Opportunities', sponsorship_path %></li>
-              <li><%= nav_link 'Registration', registration_path %></li>
+              <%= nav_link 'Speakers', speakers_path %>
+              <%= nav_link 'Call For Papers/Training', cfp_speakers_path %>
+              <%= nav_link 'Location', location_path %>
+              <%= nav_link 'Training', training_path %>
+              <%= nav_link 'Sponsorship Opportunities', sponsorship_path %>
+
               <li class="dropdown hidden-phone hidden-tablet <%= maybe_add_active_to_about %>">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -50,6 +50,7 @@
                   <li><%= link_to 'Volunteer', volunteers_path %></li>
                 </ul>
               </li>
+              <%= nav_link 'Registration', registration_path, "background-color: #006ccc;" %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
