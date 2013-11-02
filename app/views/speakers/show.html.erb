@@ -15,18 +15,18 @@
 <% unless @speaker.abstract.blank? %>
 <p>
   <strong>Abstract:</strong>
-  <span style="word-wrap: break-word; word-break: break-all; whitespace: pre-wrap;">
+  <pre>
     <%= @speaker.abstract %>
-  </span>
+  </pre>
 </p>
 <% end %>
 
 <% unless @speaker.bio.blank? %>
 <p>
   <strong>Bio:</strong>
-  <span style="word-wrap: break-word; word-break: break-all; whitespace: pre-wrap;">
+  <pre>
     <%= @speaker.bio %>
-  </span>
+  </pre>
 </p>
 <% end %>
 
