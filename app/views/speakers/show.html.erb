@@ -15,8 +15,8 @@
 <% unless @speaker.abstract.blank? %>
 <p>
   <strong>Abstract:</strong>
-  <pre>
-    <%= @speaker.abstract %>
+  <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <%= "\n" + @speaker.abstract %>
   </pre>
 </p>
 <% end %>
@@ -24,8 +24,8 @@
 <% unless @speaker.bio.blank? %>
 <p>
   <strong>Bio:</strong>
-  <pre>
-    <%= @speaker.bio %>
+  <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <%= "\n" + @speaker.bio %>
   </pre>
 </p>
 <% end %>
