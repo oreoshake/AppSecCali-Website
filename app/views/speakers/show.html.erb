@@ -2,7 +2,7 @@
 <p>
   <h1><%= @speaker.name %></h1>
 </p>
-<% if @speaker.twitter_handle %>
+<% unless @speaker.twitter_handle.blank? %>
 <p><a href="https://twitter.com/<%=@speaker.twitter_handle%>" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow <%= @speaker.twitter_handle %></a></p>
 <p>
 <% end %>
@@ -12,11 +12,22 @@
 <% end %>
 </p>
 
+<% unless @speaker.bio.blank? %>
+<p>
+  <strong>Abstract:</strong>
+  <pre>
+    <%= @speaker.abstract %>
+  </pre>
+</p>
+<% end %>
+
+<% unless @speaker.bio.blank? %>
 <p>
   <strong>Bio:</strong>
-  <blockquote>
+  <pre>
     <%= @speaker.bio %>
-  </blockquote>
+  </pre>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_speaker_path(@speaker) %>
