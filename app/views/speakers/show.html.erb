@@ -19,12 +19,23 @@
   </p>
 <% end %>
 
+<% if @speaker.company.present? %>
+  </p>
+    <strong>Company: <%= @speaker.company %> </strong>
+  </p>
+<% end %>
+
+<% if @speaker.title.present? %>
+  </p>
+    <strong>Title: <%= @speaker.title %> </strong>
+  </p>
+<% end %>
 
 <% unless @speaker.abstract.blank? %>
 <p>
   <strong>Abstract:</strong>
   <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-    <%= @speaker.abstract.gsub('•', '*').gsub('o', '  - ') %>
+    <%= @speaker.abstract %>
   </pre>
 </p>
 <% end %>
