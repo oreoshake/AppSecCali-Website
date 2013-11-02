@@ -1,4 +1,4 @@
-<p><%= image_tag((@speaker.image_url || 'egg.png'), :width => 150) %></p>
+<p><%= image_tag((@speaker.image_url.empty? ? 'egg.png' : @speaker.image_url), :width => 150) %></p>
 <p>
   <h1><%= @speaker.name %></h1>
 </p>
