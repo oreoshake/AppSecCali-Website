@@ -3,14 +3,22 @@
   <h1><%= @speaker.name %></h1>
 </p>
 <% unless @speaker.twitter_handle.blank? %>
-<p><a href="https://twitter.com/<%=@speaker.twitter_handle%>" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow <%= @speaker.twitter_handle %></a></p>
-<p>
+  <% @speaker.twitter_handle.split(',').each do |s| %>
+    <p>
+      <a href="https://twitter.com/<%=s.gsub(/\s+/, "")%>" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">
+        Follow <%= s.gsub(/\s+/, "") %>
+      </a>
+    </p>
+  <% end %>
 <% end %>
+
 <% if @speaker.website.present? %>
-  <strong>Website:</strong>
-  <%= link_to @speaker.website, @speaker.website %>
+  </p>
+    <strong>Website:</strong>
+    <%= link_to @speaker.website, @speaker.website %>
+  </p>
 <% end %>
-</p>
+
 
 <% unless @speaker.abstract.blank? %>
 <p>
