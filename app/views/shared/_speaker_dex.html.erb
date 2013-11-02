@@ -4,7 +4,7 @@
           <div class="row-fluid">
 <% Speaker.where(:confirmed => true).shuffle.each_with_index do |speaker, index| -%>
             <div class="span4">
-              <p><%= link_to(image_tag(speaker.image_url, :style => 'height: 150px'), speaker) %></p>
+              <p><%= link_to(image_tag((speaker.image_url || 'egg.png'), :style => 'height: 150px'), speaker) %></p>
               <h3><%= link_to speaker.name, speaker %></h3>
               <p><%= truncate(speaker.bio, length: 300, omission: '') { link_to "...(continued)", speaker } %></p>
             </div><!--/span-->
