@@ -12,7 +12,7 @@
 <% end %>
 </p>
 
-<% unless @speaker.bio.blank? %>
+<% unless @speaker.abstract.blank? %>
 <p>
   <strong>Abstract:</strong>
   <pre>
@@ -29,5 +29,6 @@
   </pre>
 </p>
 <% end %>
+
 
 <%= link_to 'Edit', edit_speaker_path(@speaker) %>
