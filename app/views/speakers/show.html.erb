@@ -24,7 +24,7 @@
 <p>
   <strong>Abstract:</strong>
   <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-    <%= @speaker.abstract %>
+    <%= @speaker.abstract.gsub('•', '*').gsub('o', '  - ') %>
   </pre>
 </p>
 <% end %>
@@ -33,7 +33,7 @@
 <p>
   <strong>Bio:</strong>
   <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-    <%= @speaker.bio %>
+    <%= @speaker.bio.gsub('•', '*').gsub('o', '  - ') %>
   </pre>
 </p>
 <% end %>
