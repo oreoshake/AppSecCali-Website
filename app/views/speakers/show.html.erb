@@ -12,12 +12,6 @@
   <% end %>
 <% end %>
 
-<% if @speaker.presentation_title.present? %>
-  </p>
-    <strong>Presentation Title </strong>: <%= @speaker.presentation_title %>
-  </p>
-<% end %>
-
 <% if @speaker.website.present? %>
   </p>
     <strong>Website:</strong>
@@ -37,9 +31,16 @@
   </p>
 <% end %>
 
+<hr/>
+
+<% if @speaker.presentation_title.present? %>
+  </h3>
+    <%= @speaker.presentation_title %>
+  </h3>
+<% end %>
+
 <% unless @speaker.abstract.blank? %>
 <p>
-  <strong>Abstract:</strong>
   <pre style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
     <%= @speaker.abstract %>
   </pre>
