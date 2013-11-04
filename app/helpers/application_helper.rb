@@ -22,7 +22,8 @@ module ApplicationHelper
   end
 
   def nav_link(text, href, style = nil)
-    klass = request.fullpath == href ? "active" : ""
+    klass = (request.fullpath == href ||
+      (request.fullpath =~ /speakers\/\d*/ && text == 'Speakers')) ? "active" : ""
     content_tag(:li, class: klass) do
       link_to text, href, style: style, id: text
     end
