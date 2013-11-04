@@ -12,16 +12,16 @@
   <% end %>
 <% end %>
 
-<% if @speaker.website.present? %>
-  </p>
-    <strong>Website:</strong>
-    <%= link_to @speaker.website, @speaker.website %>
-  </p>
-<% end %>
-
 <% if @speaker.company.present? %>
   </p>
     <strong>Company </strong>: <%= @speaker.company %>
+  </p>
+<% end %>
+
+<% if @speaker.website.present? %>
+  </p>
+    <strong>Personal/Company Website:</strong>
+    <%= link_to @speaker.website, @speaker.website %>
   </p>
 <% end %>
 
