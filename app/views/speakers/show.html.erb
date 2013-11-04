@@ -12,6 +12,12 @@
   <% end %>
 <% end %>
 
+<% if @speaker.presentation_title.present? %>
+  </p>
+    <strong>Presentation Title </strong>: <%= @speaker.presentation_title %>
+  </p>
+<% end %>
+
 <% if @speaker.website.present? %>
   </p>
     <strong>Website:</strong>
@@ -21,13 +27,13 @@
 
 <% if @speaker.company.present? %>
   </p>
-    <strong>Company: <%= @speaker.company %> </strong>
+    <strong>Company </strong>: <%= @speaker.company %>
   </p>
 <% end %>
 
 <% if @speaker.title.present? %>
   </p>
-    <strong>Title: <%= @speaker.title %> </strong>
+    <strong>Title</strong>: <%= @speaker.title %>
   </p>
 <% end %>
 
