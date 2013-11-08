@@ -3,10 +3,6 @@ class WelcomeController < ApplicationController
     @title = "Register Now"
   end
 
-	def training
-		@speakers = Speaker.all
-	end
-
 	def index
 
 	end

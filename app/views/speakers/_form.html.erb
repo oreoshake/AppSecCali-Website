@@ -28,12 +28,6 @@
     <%= f.text_area :abstract %>
   </div>
   <div class="field row-fluid">
-    <%= f.label :training, "Is this for training?", :class => "control-label lead"  %>
-    <div class="make-switch">
-      <%= f.check_box :training %>
-    </div>
-  </div>
-  <div class="field row-fluid">
     <%= f.label :presentation_format, "Format", :class => "control-label lead"  %>
     <div class="make-switch">
       <%= f.select :presentation_format, [['45 Minutes', '45'], ['20 Minutes', '20'], ['5 Minutes','5']] %>

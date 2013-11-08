@@ -1,10 +1,10 @@
         <div class="jumbotron">
           <%= link_to 'Submit Abstract', new_speaker_path, :class => 'btn btn-primary' %>
-        </div>        
+        </div>
 
         <h1>Confirmed Speakers</h1>
           <div class="row-fluid">
-<% @speakers.where(:confirmed => true).where(:training => false).shuffle.each_with_index do |speaker, index| -%>
+<% @speakers.where(:confirmed => true).shuffle.each_with_index do |speaker, index| -%>
             <div class="span4">
               <p><%= link_to(image_tag(speaker.image_url, :style => 'height: 150px'), speaker) %></p>
               <h3><%= link_to speaker.name, speaker %></h3>
