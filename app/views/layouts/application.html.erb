@@ -65,24 +65,25 @@
           <div class="well sidebar-nav text-center sponsors" style="background-color: #333;">
             <h3> Newsletter <h3>
 
-              <%= form_for @beta_request, class: 'form-inline' do |f| %>
-                <%= f.text_field :name, placeholder: "Name" %>
-                <%= f.text_field :email, placeholder: "Email" %><br>
-                <%= f.button 'Sign up for announcements', class: 'btn btn-primary' %>
-              <% end -%>
-            <h3 class="sponsors text-center">Diamond Sponsor</h3>
-            <%= link_to(image_tag('logo_placeholder.png'), sponsorship_path) %>
+            <%= form_for @beta_request, class: 'form-inline' do |f| %>
+              <%= f.text_field :name, placeholder: "Name" %>
+              <%= f.text_field :email, placeholder: "Email" %><br>
+              <%= f.button 'Sign up for announcements', class: 'btn btn-primary' %>
+            <% end -%>
+
             <div class="text-center sponsors" id="sponsors">
+              <h2>Diamond Sponsor</h2>
+              <%= image_tag('sponsors/dbnetworks.jpg') %>
               <h3>Platinum Sponsors</h3>
-              <%= image_tag('qualys.png') %>
-              <%= image_tag('sponsors-security-innovation.gif') %>
+              <%= image_tag('sponsors/qualys.png') %>
+              <%= image_tag('sponsors/security-innovation.gif') %>
               <h3>Gold Sponsors</h3>
-              <%= image_tag('sponsors-netspi.jpg') %>
-              <%= image_tag('sponsors-whitehat.jpg') %>
-              <%= image_tag('sponsors-astech.jpg') %>
-              <%= image_tag('sponsors-swamp.png') %>
+              <%= image_tag('sponsors/netspi.jpg') %>
+              <%= image_tag('sponsors/whitehat.jpg') %>
+              <%= image_tag('sponsors/astech.jpg') %>
+              <%= image_tag('sponsors/swamp.png') %>
               <h4>Misc Sponsors</h4>
-              <%= image_tag('sponsors-technical-connections.jpg', width: '193px') %>
+              <%= image_tag('sponsors/technical-connections.jpg', width: '193px') %>
             </div>
             <a class="twitter-timeline" href="https://twitter.com/AppSecCali" data-widget-id="374419775272673280">Tweets by @AppSecCali</a>
           </div><!--/.well -->
