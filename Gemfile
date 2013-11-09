@@ -12,6 +12,7 @@ gem 'rvm-capistrano'
 gem 'dalli'
 gem 'newrelic_rpm'
 gem 'mailchimp-api', require: 'mailchimp'
+gem 'friendly_id', '~> 5.0.0'
 
 platforms :mri do
   gem 'pg'
