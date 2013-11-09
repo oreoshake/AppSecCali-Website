@@ -11,6 +11,7 @@ RecruitLy::Application.routes.draw do
   get :location, :controller => :welcome
   get :splash, :controller => :welcome
   get :contact, :controller => :welcome
+  get :hotels, :controller => :welcome
   get '/training' => redirect("/")
   get :code_of_conduct, :controller => :welcome
   get :privacy, :controller => :welcome
