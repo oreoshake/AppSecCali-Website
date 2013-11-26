@@ -18,8 +18,6 @@ class SpeakersController < ApplicationController
   def show
     @speaker = Speaker.find(params[:id])
     @title = @speaker.name
-    raise ActiveRecord::RecordNotFound .new('Not Found') unless @speaker.confirmed?
-
   end
 
   def new
