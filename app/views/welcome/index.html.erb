@@ -1,3 +1,13 @@
-<%= render 'shared/jumbotron' %>
+<div class="jumbotron">
+	<h3>Join OWASP Los Angeles, Orange County, San Diego, Santa Barbara, and the Bay Area as we join forces to host AppSec California!</h3>
+	<p class="lead">January 27 &mdash; 28, 2014</p>
+	<p><a href="http://www.cvent.com/d/q4q8nc/4W" class="btn btn-primary">Register Now!</a></p>
+</div>
+
+<p>AppSec California is the first of hopefully many annual conferences hosted by all of the California chapters. Join us on the beaches of Santa Monica which is closest to our Los Angeles Chapter. Space is limited to around 200 attendees so be sure to <%= link_to 'get your ticket before we sell out', registration_path %>!</p>
+
+<p>Come a little early or stay the rest of the week; however you enjoy it, the weather is likely going to be warmer than where you are. Enjoy the Santa Monica pier and downtown area or explore the surrounding cities. You probably have a client or 10 near by too so say hello to them too.</p>
+
+<p>Stay tuned as activities around the event are updated and more speakers are added to the lineup. A schedule will come at some point.</p>
 
 <%= render 'shared/speaker_dex', :locals => { :speakers => @speakers } %>
