@@ -35,7 +35,7 @@
           <a class="brand" href="/">AppSec California 2014</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <!--<%= nav_link 'Schedule', schedule_path %>-->
+              <%= nav_link 'Schedule', schedule_path %>
               <%= nav_link 'Speakers', speakers_path %>
               <%= nav_link 'Location', location_path %>
               <%= nav_link 'Sponsorship Opportunities', sponsorship_path %>
@@ -64,6 +64,7 @@
         </div>
         <div class="span3">
           <div class="well sidebar-nav text-center sponsors" style="background-color: #333;">
+
             <h3> Newsletter <h3>
 
             <%= form_for @beta_request, class: 'form-inline' do |f| %>
