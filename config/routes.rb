@@ -8,6 +8,7 @@ RecruitLy::Application.routes.draw do
   	end
   end
 
+  get :schedule, :controller => :welcome
   get :location, :controller => :welcome
   get :splash, :controller => :welcome
   get :contact, :controller => :welcome
