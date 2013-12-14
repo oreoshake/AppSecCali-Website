@@ -1,8 +1,6 @@
 <h1> Tentative Schedule </h1>
 <%= stylesheet_link_tag 'sched.css' %>
 
-
-
     <link rel="stylesheet" type="text/css" href="http://cdn.schd.ws/common/css/main-2013-12-04.css">
 <!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css"><![endif]-->
     <!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css"><![endif]-->
@@ -12,61 +10,67 @@
     
 
     <style type="text/css">.event a {margin-left:26px;border-left:1px solid rgba(0,0,0,0.15)}#tip {margin-left:20px;}</style>
-<style type="text/css">
-  </style>
-
-
-<style type="text/css" media="screen">#gsWidget {visibility:hidden}</style></head>
-<body id="schedorg" class="schedorg-body-home schedorg-body-embed">
-
-<div id="tip" style="display: none; width: 420px;"><img src="http://cdn.schd.ws/common/loading.gif" alt="Loading…"></div>
-
- <div id="sched-body-outer">  
-    <div id="sched-body" class="container">  
+<div id="sched-body-outer" style="
+    border: 0px;
+">  
+    <div id="sched-body" style="padding: 35px;">  
     
     <div id="sched-body-inner">
         
               
 
    
-        <div id="sched-page-home" class="row">
+        <div id="sched-page-grid" class="row">
       <div id="sched-container-header-menu">
         <ul>
-        <li id="sched-menu-link-me" class="sched-menu-link">   
-      <div id="sched-views">
-      
-        <div class="popover"><div class="popover-content"><div class="arrow"><span></span></div><div class="popover-body"><div class="popover-body-inner">
-          
-        </div></div></div></div>
-      </div>    </li>
+        
         <li id="sched-menu-link-schedule" class="sched-menu-link">  
       <div id="sched-views">
-      <a href="http://owaspappseccalifornia2014.sched.org/" class="sched-menu-link-active">Schedule</a>
+      <a href="/?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" class="sched-menu-link-active">Schedule</a>
         
          <div class="popover"><div class="popover-content"><div class="arrow"><span></span></div><div class="popover-body"><div class="popover-body-inner">
         <ul class="sched-toggle">
-          <li id="sched-menu-link-tooltip" class="sched-menu-link-active"><a href="/?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" target="new"><span></span>Simple</a></li>
-          <li id="sched-menu-link-detailed"><a href="http://owaspappseccalifornia2014.sched.org/list/descriptions/#.Uqy1lWRDvKg"  target="new"><span></span>Expanded</a></li>
-          <li id="sched-menu-link-grid"><a href="http://owaspappseccalifornia2014.sched.org/grid/" target="new"><span></span>Grid</a></li>
-          <li id="sched-menu-link-venues"><a href="http://owaspappseccalifornia2014.sched.org/venues/" target="new"><span></span>By Venue</a></li>
+          <li id="sched-menu-link-tooltip"><a href="/?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span></span>Simple</a></li>
+          <li id="sched-menu-link-detailed"><a href="/list/descriptions/?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span></span>Expanded</a></li>
+          <li id="sched-menu-link-grid" class="sched-menu-link-active"><a href="/grid/?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span></span>Grid</a></li>
+          <li id="sched-menu-link-venues"><a href="/venues/?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span></span>By Venue</a></li>
         
         </ul> 
         </div></div></div></div>
       </div>    </li>  
-        <li id="sched-menu-speakers" class="sched-menu-link"><a  target="new" href="http://owaspappseccalifornia2014.sched.org/directory/speakers?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="">Speakers</a></li>
+        <li id="sched-menu-speakers" class="sched-menu-link"><a href="/directory/speakers?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" class="">Speakers</a></li>
                 
                                 <li id="sched-menu-attendees" class="sched-menu-link" style="position:relative">
-                  <a  target="new" href="http://owaspappseccalifornia2014.sched.org/directory/attendees?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="attendee-speaker-link">Attendees</a>
+                  <a href="/directory/attendees?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" class="attendee-speaker-link">Attendees</a>
               </li>
                 <li class="sched-menu-link" id="sched-menu-search">
     <div class="dropdown">
-      <a id="sched-header-menu-myprofile-link" class="dropdown-toggle" data-toggle="dropdown" href="/search?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" onclick="event.preventDefault()">Search</a>
+      <a id="sched-header-menu-myprofile-link" class="dropdown-toggle" data-toggle="dropdown" href="/search?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" onclick="event.preventDefault()">Search</a>
       <div class="popover dropdown-menu" role="menu" aria-labelledby="sched-header-menu-myprofile-link"><div class="popover-content">
       <div class="arrow"><span></span></div>
       <div class="popover-body"><div class="popover-body-inner">
         <div id="sched-sidebar-filters" class="sched-sidebar-section vevent" itemscope="" itemtype="http://schema.org/Event">
   <div id="sched-sidebar-filters-type">    
+    <ul>
+      <li id="sched-sidebar-search">
+        <form action="/" method="get">
+          <input type="text" id="s" name="s" class="swap" value="Schedule or People" style="color: rgb(204, 204, 204);">&nbsp;<input id="s-submit" type="submit" value="Search" class="sched-button-submit"><br>
+           <a href="/search?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" style="margin:5px 2px 0;padding:0 !important;float:none;" id="sched-sidebar-search-note">or browse by date + venue</a>
+        </form>
+      </li>   
+
+
+    <li id="sched-type-1" class="lev1 ev_1"><a title="View 5 Break Events" href="/type/break?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span class="box"></span> Break</a></li>
+<li id="sched-type-2" class="lev1 ev_2"><a title="View 6 Keynote Events" href="/type/keynote?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span class="box"></span> Keynote</a></li>
+<li id="sched-type-3" class="lev1 ev_3"><a title="View 23 Session Events" href="/type/session?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span class="box"></span> Session</a></li>
+<li id="sched-type-4" class="lev1 ev_4"><a title="View 6 Turbo Talk Events" href="/type/turbo+talk?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span class="box"></span> Turbo Talk</a></li>
+<li style="clear:left"></li>
     
+        <li id="sched-sidebar-filters-popular">
+      <a href="/popular?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no"><span class="box"></span>Popular</a>
+    </li>
+    
+  </ul>
   </div></div>        <br class="s-clr">
       </div></div></div></div>
     </div>  
@@ -82,18 +86,14 @@
                               
                                 
 <style type="text/css">#sched-analitic { display:none }</style>
-<a href="/analitic?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" id="sched-analitic">View analytic</a>
+<a href="/analitic?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="sched-analitic">View analytic</a>
 
 
 
 
 
-
-                                         <div class="sched-container-header" id="2014-01-27">             
-              
+   <div class="sched-container-header" id="2014-01-27"> 
                 
-                                          
-                            
           
 <div class="sched-container-dates">
 
@@ -101,74 +101,324 @@
         <b>Monday</b>, January 27            
              
 </div>
-                            
-             </div>             <div class="sched-container-top">&nbsp;</div>
-      <h3> 8:45am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/f6aebd62c98364071371c7528a79ff6d?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="f6aebd62c98364071371c7528a79ff6d">Welcome Address <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 9:00am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/695b37593fe46e790cbe44441c389816?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="695b37593fe46e790cbe44441c389816">Opening Remarks <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 9:30am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/79311e9150a5b8a42b7f4cdd28ce08b3?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="79311e9150a5b8a42b7f4cdd28ce08b3">Keynote (Robert Hansen) <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>10:30am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_1"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/dda81d263294504ebb0991d12e239457?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="dda81d263294504ebb0991d12e239457">Break <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>10:45am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/55f13c22e4533e06e7a99505967cf7ad?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="55f13c22e4533e06e7a99505967cf7ad">AppSec at DevOps Speed and Portfolio Scale <span class="vs">Track 3</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/044eb3bb82eb5bf6a050f71ae0470d79?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="044eb3bb82eb5bf6a050f71ae0470d79">Attack Driven Defense <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/f0dc1dd7d51b3e4788618c3cc4720193?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="f0dc1dd7d51b3e4788618c3cc4720193">Confessions of a Social Engineer: Why Developers Are My Favorite Target <span class="vs">Track 2</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>11:45am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/0d8b520b617185b1f91298613fd0bc8f?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="0d8b520b617185b1f91298613fd0bc8f">An inconvenient Zeus: The rise of Saas targeted malware <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/f3af56a0541e631b337ecdc11ed6d211?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="f3af56a0541e631b337ecdc11ed6d211">CSO's Myopia <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/95a2786be894414f646c3ea57c9249c1?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="95a2786be894414f646c3ea57c9249c1">Mantra OS <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>12:15pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_1"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/b336804ca827499cc6d9b7e86070699d?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="b336804ca827499cc6d9b7e86070699d">Lunch <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 1:45pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/5d4454eea675146b1258139e0d54596d?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="5d4454eea675146b1258139e0d54596d">Can AppSec Training Really Make a Smarter Developer? <span class="vs">Track 3</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/d5042a9e7d44b995b5f1c512324b588c?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="d5042a9e7d44b995b5f1c512324b588c">PRISM-AS-A-SERVICE: Not Subject to American Law <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/734ab3ccc32497f321f52360c2badb71?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="734ab3ccc32497f321f52360c2badb71">Warning Ahead: Security Storms are Brewing in Your JavaScript <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 2:45pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/7339455bcbef15a5fad85c6df5b6edde?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="7339455bcbef15a5fad85c6df5b6edde">HTTP Time Bandit <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/a97d020ec8b3d2f98e8b711b79f1130b?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="a97d020ec8b3d2f98e8b711b79f1130b">Million Browser Botnet <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/0b5105fef45b9ced364f2deb7d1c2cfc?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="0b5105fef45b9ced364f2deb7d1c2cfc">Whiz, Bang, ZAP! An introduction to OWASP's Zed Attack Proxy <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 3:45pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_1"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/7661644132b84704acc1c494578bcaa0?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="7661644132b84704acc1c494578bcaa0">Break <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 4:15pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/82ce5dafde7b18fabfcd2093f2d828e5?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="82ce5dafde7b18fabfcd2093f2d828e5">New Frameworks, Old Problems <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/bade903510a8d49eedaa117d7eadc503?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="bade903510a8d49eedaa117d7eadc503">OWASP Top 10 Mobile Risks: 2014 Reboot <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/dd4790a72929a0a76bddaed9916edfe1?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="dd4790a72929a0a76bddaed9916edfe1">Securing the Software Supply Chain <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 5:15pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/d8ecb21b2bdd06aeec8f361939ea4240?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="d8ecb21b2bdd06aeec8f361939ea4240">Adventures in Reviewing Mountains of Code <span class="vs">Track 3</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/79382473f81bb42526ad1ac732dca923?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="79382473f81bb42526ad1ac732dca923">DIY Command &amp; Control For Fun And *No* Profit <span class="vs">Track 2</span></a></span>
-<br style="clear:both">       </div></div>
-                    
-            <div class="sched-container-bottom">&nbsp;</div>
-                      <div class="sched-container-header" id="2014-01-28">             
-              
+      
+      
+      
+  </div>
+  
+  
+    <div class="sched-container-top">&nbsp;</div> 
+    <div class="sched-container">
+      <div class="sched-container-inner">
+
+                                    
+         
+        
+        <table style="width:680px; border-bottom: 1px solid #aaa; margin-bottom: 30px">
+          <tbody><tr>
+            <th class="sched-page-grid-times"></th>
+                          <th class="sched-page-grid-venues">Track 1</th>
+                          <th class="sched-page-grid-venues">Track 2</th>
+                          <th class="sched-page-grid-venues">Track 3</th>
+                          <th class="sched-page-grid-venues"></th>
+                          <th class="sched-page-grid-venues"></th>
+                      </tr>
+          <tr>
+            <td class="sched-page-grid-time">
+              <ul>
+                                <li> 8:30am</li>
+                                <li> 8:45am</li>
+                                <li> 9:00am</li>
+                                <li> 9:15am</li>
+                                <li> 9:30am</li>
+                                <li> 9:45am</li>
+                                <li>10:00am</li>
+                                <li>10:15am</li>
+                                <li>10:30am</li>
+                                <li>10:45am</li>
+                                <li>11:00am</li>
+                                <li>11:15am</li>
+                                <li>11:30am</li>
+                                <li>11:45am</li>
+                                <li>12:00pm</li>
+                                <li>12:15pm</li>
+                                <li>12:30pm</li>
+                                <li>12:45pm</li>
+                                <li> 1:00pm</li>
+                                <li> 1:15pm</li>
+                                <li> 1:30pm</li>
+                                <li> 1:45pm</li>
+                                <li> 2:00pm</li>
+                                <li> 2:15pm</li>
+                                <li> 2:30pm</li>
+                                <li> 2:45pm</li>
+                                <li> 3:00pm</li>
+                                <li> 3:15pm</li>
+                                <li> 3:30pm</li>
+                                <li> 3:45pm</li>
+                                <li> 4:00pm</li>
+                                <li> 4:15pm</li>
+                                <li> 4:30pm</li>
+                                <li> 4:45pm</li>
+                                <li> 5:00pm</li>
+                                <li> 5:15pm</li>
+                                <li> 5:30pm</li>
+                                <li> 5:45pm</li>
+                                <li> 6:00pm</li>
+                                <li> 6:15pm</li>
+                                <li> 6:30pm</li>
+                              </ul>
+            </td>
+                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:30px; height:30px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Welcome Address" href="http://owaspappseccalifornia2014.sched.org/event/f6aebd62c98364071371c7528a79ff6d?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="f6aebd62c98364071371c7528a79ff6d">
+                                    <p style="">
+                    <strong class="sched-page-grid-event-name">Welcome Address</strong>
+                  </p>
+                </a>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:60px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Opening Remarks" href="http://owaspappseccalifornia2014.sched.org/event/695b37593fe46e790cbe44441c389816?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="695b37593fe46e790cbe44441c389816">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Opening Remarks</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:120px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Keynote (Robert Hansen)" href="http://owaspappseccalifornia2014.sched.org/event/79311e9150a5b8a42b7f4cdd28ce08b3?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="79311e9150a5b8a42b7f4cdd28ce08b3">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Keynote (Robert Hansen)</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_1" style="background-color:#F3827F;margin-top:240px; height:30px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Break" href="http://owaspappseccalifornia2014.sched.org/event/dda81d263294504ebb0991d12e239457?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="dda81d263294504ebb0991d12e239457">
+                                    <p style="">
+                    <strong class="sched-page-grid-event-name">Break</strong>
+                  </p>
+                </a>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:270px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Attack Driven Defense" href="http://owaspappseccalifornia2014.sched.org/event/044eb3bb82eb5bf6a050f71ae0470d79?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="044eb3bb82eb5bf6a050f71ae0470d79">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Attack Driven Defense</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:390px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="An inconvenient Zeus: The rise of Saas targeted malware" href="http://owaspappseccalifornia2014.sched.org/event/0d8b520b617185b1f91298613fd0bc8f?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="0d8b520b617185b1f91298613fd0bc8f">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">An inconvenient Zeus: The rise of…</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_1" style="background-color:#F3827F;margin-top:450px; height:180px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Lunch" href="http://owaspappseccalifornia2014.sched.org/event/b336804ca827499cc6d9b7e86070699d?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="b336804ca827499cc6d9b7e86070699d">
+                                    <p style="height:150px">
+                    <strong class="sched-page-grid-event-name">Lunch</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:630px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Warning Ahead: Security Storms are Brewing in Your JavaScript" href="http://owaspappseccalifornia2014.sched.org/event/734ab3ccc32497f321f52360c2badb71?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="734ab3ccc32497f321f52360c2badb71">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Warning Ahead: Security Storms are Brewing in Your JavaScript</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:750px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Million Browser Botnet" href="http://owaspappseccalifornia2014.sched.org/event/a97d020ec8b3d2f98e8b711b79f1130b?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="a97d020ec8b3d2f98e8b711b79f1130b">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Million Browser Botnet</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_1" style="background-color:#F3827F;margin-top:870px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Break" href="http://owaspappseccalifornia2014.sched.org/event/7661644132b84704acc1c494578bcaa0?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="7661644132b84704acc1c494578bcaa0">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Break</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:930px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="OWASP Top 10 Mobile Risks: 2014 Reboot" href="http://owaspappseccalifornia2014.sched.org/event/bade903510a8d49eedaa117d7eadc503?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="bade903510a8d49eedaa117d7eadc503">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">OWASP Top 10 Mobile Risks: 2014 Reboot</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:270px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Confessions of a Social Engineer: Why Developers Are My Favorite Target" href="http://owaspappseccalifornia2014.sched.org/event/f0dc1dd7d51b3e4788618c3cc4720193?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="f0dc1dd7d51b3e4788618c3cc4720193">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Confessions of a Social Engineer: Why Developers Are My Favorite Target</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:390px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="CSO's Myopia" href="http://owaspappseccalifornia2014.sched.org/event/f3af56a0541e631b337ecdc11ed6d211?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="f3af56a0541e631b337ecdc11ed6d211">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">CSO's Myopia</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:630px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="PRISM-AS-A-SERVICE: Not Subject to American Law" href="http://owaspappseccalifornia2014.sched.org/event/d5042a9e7d44b995b5f1c512324b588c?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="d5042a9e7d44b995b5f1c512324b588c">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">PRISM-AS-A-SERVICE: Not Subject to American Law</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:750px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="HTTP Time Bandit" href="http://owaspappseccalifornia2014.sched.org/event/7339455bcbef15a5fad85c6df5b6edde?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="7339455bcbef15a5fad85c6df5b6edde">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">HTTP Time Bandit</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:930px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="New Frameworks, Old Problems" href="http://owaspappseccalifornia2014.sched.org/event/82ce5dafde7b18fabfcd2093f2d828e5?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="82ce5dafde7b18fabfcd2093f2d828e5">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">New Frameworks, Old Problems</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:1050px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="DIY Command &amp; Control For Fun And *No* Profit" href="http://owaspappseccalifornia2014.sched.org/event/79382473f81bb42526ad1ac732dca923?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="79382473f81bb42526ad1ac732dca923">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">DIY Command &amp; Control For Fun And *No* Profit</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:270px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="AppSec at DevOps Speed and Portfolio Scale" href="http://owaspappseccalifornia2014.sched.org/event/55f13c22e4533e06e7a99505967cf7ad?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="55f13c22e4533e06e7a99505967cf7ad">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">AppSec at DevOps Speed and Portfolio Scale</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:390px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Mantra OS" href="http://owaspappseccalifornia2014.sched.org/event/95a2786be894414f646c3ea57c9249c1?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="95a2786be894414f646c3ea57c9249c1">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Mantra OS</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:630px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Can AppSec Training Really Make a Smarter Developer?" href="http://owaspappseccalifornia2014.sched.org/event/5d4454eea675146b1258139e0d54596d?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="5d4454eea675146b1258139e0d54596d">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Can AppSec Training Really Make a Smarter Developer?</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:750px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Whiz, Bang, ZAP! An introduction to OWASP's Zed Attack Proxy" href="http://owaspappseccalifornia2014.sched.org/event/0b5105fef45b9ced364f2deb7d1c2cfc?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="0b5105fef45b9ced364f2deb7d1c2cfc">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Whiz, Bang, ZAP! An introduction to OWASP's Zed Attack Proxy</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:930px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Securing the Software Supply Chain" href="http://owaspappseccalifornia2014.sched.org/event/dd4790a72929a0a76bddaed9916edfe1?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="dd4790a72929a0a76bddaed9916edfe1">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Securing the Software Supply Chain</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:1050px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Adventures in Reviewing Mountains of Code" href="http://owaspappseccalifornia2014.sched.org/event/d8ecb21b2bdd06aeec8f361939ea4240?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="d8ecb21b2bdd06aeec8f361939ea4240">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Adventures in Reviewing Mountains of Code</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                          </td>                        <td class="sched-page-grid-session-wrapper">
+                          </td>                      </tr>
+          <tr>
+            <th class="sched-page-grid-venues"></th>
+                              <th class="sched-page-grid-venues">Track 1</th>
+                              <th class="sched-page-grid-venues">Track 2</th>
+                              <th class="sched-page-grid-venues">Track 3</th>
+                              <th class="sched-page-grid-venues"></th>
+                              <th class="sched-page-grid-venues"></th>
+                        </tr>
+        </tbody></table>
+                   
+    </div>    </div>   
+    <div class="sched-container-bottom">&nbsp;</div>
+    <div id="sched-page-grid-footer">
+      &nbsp;
+    </div>
+
+   <div class="sched-container-header" id="2014-01-28"> 
                 
-                                          
-                            
           
 <div class="sched-container-dates">
 
@@ -176,58 +426,259 @@
         <b>Tuesday</b>, January 28            
              
 </div>
-                            
-             </div>             <div class="sched-container-top">&nbsp;</div>
-                <h3> 9:20am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/28eec256323aad81c0c750640ad7ad27?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="28eec256323aad81c0c750640ad7ad27">Day 2 Opening Remarks <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 9:30am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/155897f971c407cb5d32109c3bb503bf?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="155897f971c407cb5d32109c3bb503bf">Application Sandboxes: Know thy limits <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/4869e01e475dcd64586383590f8c0767?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="4869e01e475dcd64586383590f8c0767">CSRF: not all defenses are created equal <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/f40cb73d62a09a1bef036c2775d0fb55?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="f40cb73d62a09a1bef036c2775d0fb55">Running At 99%: Surviving An Application DoS <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>10:30am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/8e021898434315bbb3e2fe8d299745c0?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="8e021898434315bbb3e2fe8d299745c0">Anatomy of a Webshell <span class="vs">Track 3</span></a></span>
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/401661991be22f02c63ce7eb301c1ee4?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="401661991be22f02c63ce7eb301c1ee4">Android Security Underpinnings <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_4"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/b35da4a9b95216172e18f4637a50e394?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="b35da4a9b95216172e18f4637a50e394">Privacy's Past, Present and Future <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>11:00am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_1"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/406a2470bd211f4a822d063b3c3f06e1?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="406a2470bd211f4a822d063b3c3f06e1">Break <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>11:30am</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/3e1e625d6d461ec68401aa8614ff8fd1?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="3e1e625d6d461ec68401aa8614ff8fd1">OWASP Top Ten Proactive Controls <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/2d8addba08fc6cbc5e60483c9b7de123?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="2d8addba08fc6cbc5e60483c9b7de123">TBA (Nick Galbreath) <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/5527b14876bebcd0bf1c01e8d7800195?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="5527b14876bebcd0bf1c01e8d7800195">What is CSP and why haven't you applied it yet? <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3>12:30pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_1"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/35e039798abf03b1e7bf361d8f2f2393?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="35e039798abf03b1e7bf361d8f2f2393">Lunch <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 2:00pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/376c8731bae68216b231b033105dd990?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="376c8731bae68216b231b033105dd990">7 Deadly Sins: Unlock the Gates of Mobile Hacking Heaven <span class="vs">Track 1</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/a8fe6ea61c9b89371aa3e87f6787861f?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="a8fe6ea61c9b89371aa3e87f6787861f">HTML 5 Security <span class="vs">Track 2</span></a></span>
-<span class="event event-loggedin ev_3"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/cf5cd27346a497c1fc025850a1eb16ba?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="cf5cd27346a497c1fc025850a1eb16ba">Next Generation Red Teaming <span class="vs">Track 3</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 2:45pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_0"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/fb1f221d800018b821cf5c1bb326df78?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="fb1f221d800018b821cf5c1bb326df78">Break <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 3:00pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/e1ce2d853f4565b5e5bddfba5764627f?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="e1ce2d853f4565b5e5bddfba5764627f">Why Infosec Needs Rugged DevOps Now: A Fifteen Year Study Of High Performing IT Organizations <span class="vs">Track 1</span></a></span>
-<br style="clear:both">       </div></div>
-              <h3> 4:00pm</h3>
-      <div class="sched-container"><div class="sched-container-inner">
-<span class="event event-loggedin ev_2"><span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span><a href="http://owaspappseccalifornia2014.sched.org/event/3a6e0a8897f8007d3a2024de2bddf710?iframe=yes&amp;w=100&amp;sidebar=yes&amp;bg=no" class="name" id="3a6e0a8897f8007d3a2024de2bddf710">Closing Remarks (and prizes!) <span class="vs">Track 1</span></a></span>
-<br class="s-clr"></div></div><div class="sched-container-bottom">&nbsp;</div>
-    
+      
+      
+      
+  </div>
+  
+  
+    <div class="sched-container-top">&nbsp;</div> 
+    <div class="sched-container">
+      <div class="sched-container-inner">
+
+                                    
+         
+        
+        <table style="width:680px; border-bottom: 1px solid #aaa; margin-bottom: 30px">
+          <tbody><tr>
+            <th class="sched-page-grid-times"></th>
+                          <th class="sched-page-grid-venues">Track 1</th>
+                          <th class="sched-page-grid-venues">Track 2</th>
+                          <th class="sched-page-grid-venues">Track 3</th>
+                          <th class="sched-page-grid-venues"></th>
+                          <th class="sched-page-grid-venues"></th>
+                      </tr>
+          <tr>
+            <td class="sched-page-grid-time">
+              <ul>
+                                <li> 9:00am</li>
+                                <li> 9:15am</li>
+                                <li> 9:30am</li>
+                                <li> 9:45am</li>
+                                <li>10:00am</li>
+                                <li>10:15am</li>
+                                <li>10:30am</li>
+                                <li>10:45am</li>
+                                <li>11:00am</li>
+                                <li>11:15am</li>
+                                <li>11:30am</li>
+                                <li>11:45am</li>
+                                <li>12:00pm</li>
+                                <li>12:15pm</li>
+                                <li>12:30pm</li>
+                                <li>12:45pm</li>
+                                <li> 1:00pm</li>
+                                <li> 1:15pm</li>
+                                <li> 1:30pm</li>
+                                <li> 1:45pm</li>
+                                <li> 2:00pm</li>
+                                <li> 2:15pm</li>
+                                <li> 2:30pm</li>
+                                <li> 2:45pm</li>
+                                <li> 3:00pm</li>
+                                <li> 3:15pm</li>
+                                <li> 3:30pm</li>
+                                <li> 3:45pm</li>
+                                <li> 4:00pm</li>
+                                <li> 4:15pm</li>
+                                <li> 4:30pm</li>
+                                <li> 4:45pm</li>
+                                <li> 5:00pm</li>
+                                <li> 5:15pm</li>
+                              </ul>
+            </td>
+                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:40px; height:20px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Day 2 Opening Remarks" href="http://owaspappseccalifornia2014.sched.org/event/28eec256323aad81c0c750640ad7ad27?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="28eec256323aad81c0c750640ad7ad27">
+                                    <p style="">
+                    <strong class="sched-page-grid-event-name">Day 2 Ope…</strong>
+                  </p>
+                </a>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:60px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Application Sandboxes: Know thy limits" href="http://owaspappseccalifornia2014.sched.org/event/155897f971c407cb5d32109c3bb503bf?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="155897f971c407cb5d32109c3bb503bf">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Application Sandboxes: Know thy limits</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:180px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Privacy's Past, Present and Future" href="http://owaspappseccalifornia2014.sched.org/event/b35da4a9b95216172e18f4637a50e394?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="b35da4a9b95216172e18f4637a50e394">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Privacy's Past, Present and Future</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_1" style="background-color:#F3827F;margin-top:240px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Break" href="http://owaspappseccalifornia2014.sched.org/event/406a2470bd211f4a822d063b3c3f06e1?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="406a2470bd211f4a822d063b3c3f06e1">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Break</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:300px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="TBA (Nick Galbreath)" href="http://owaspappseccalifornia2014.sched.org/event/2d8addba08fc6cbc5e60483c9b7de123?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="2d8addba08fc6cbc5e60483c9b7de123">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">TBA (Nick Galbreath)</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_1" style="background-color:#F3827F;margin-top:420px; height:180px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Lunch" href="http://owaspappseccalifornia2014.sched.org/event/35e039798abf03b1e7bf361d8f2f2393?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="35e039798abf03b1e7bf361d8f2f2393">
+                                    <p style="height:150px">
+                    <strong class="sched-page-grid-event-name">Lunch</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:600px; height:90px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="7 Deadly Sins: Unlock the Gates of Mobile Hacking Heaven" href="http://owaspappseccalifornia2014.sched.org/event/376c8731bae68216b231b033105dd990?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="376c8731bae68216b231b033105dd990">
+                                    <p style="height:60px">
+                    <strong class="sched-page-grid-event-name">7 Deadly Sins: Unlock the Gates of Mobile Hacking H…</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_0" style="background-color:;margin-top:690px; height:90px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Break" href="http://owaspappseccalifornia2014.sched.org/event/fb1f221d800018b821cf5c1bb326df78?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="fb1f221d800018b821cf5c1bb326df78">
+                                    <p style="height:60px">
+                    <strong class="sched-page-grid-event-name">Break</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:720px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Why Infosec Needs Rugged DevOps Now: A Fifteen Year Study Of High Performing IT Organizations" href="http://owaspappseccalifornia2014.sched.org/event/e1ce2d853f4565b5e5bddfba5764627f?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="e1ce2d853f4565b5e5bddfba5764627f">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Why Infosec Needs Rugged DevOps Now: A Fifteen Year Study Of High Per…</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_2" style="background-color:#9EDF7D;margin-top:840px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Closing Remarks (and prizes!)" href="http://owaspappseccalifornia2014.sched.org/event/3a6e0a8897f8007d3a2024de2bddf710?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="3a6e0a8897f8007d3a2024de2bddf710">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Closing Remarks (and prizes!)</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:60px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="CSRF: not all defenses are created equal" href="http://owaspappseccalifornia2014.sched.org/event/4869e01e475dcd64586383590f8c0767?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="4869e01e475dcd64586383590f8c0767">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">CSRF: not all defenses are created equal</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:180px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Android Security Underpinnings" href="http://owaspappseccalifornia2014.sched.org/event/401661991be22f02c63ce7eb301c1ee4?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="401661991be22f02c63ce7eb301c1ee4">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Android Security Underpinnings</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:300px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="OWASP Top Ten Proactive Controls" href="http://owaspappseccalifornia2014.sched.org/event/3e1e625d6d461ec68401aa8614ff8fd1?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="3e1e625d6d461ec68401aa8614ff8fd1">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">OWASP Top Ten Proactive Controls</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:600px; height:90px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="HTML 5 Security" href="http://owaspappseccalifornia2014.sched.org/event/a8fe6ea61c9b89371aa3e87f6787861f?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="a8fe6ea61c9b89371aa3e87f6787861f">
+                                    <p style="height:60px">
+                    <strong class="sched-page-grid-event-name">HTML 5 Security</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                             <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:60px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Running At 99%: Surviving An Application DoS" href="http://owaspappseccalifornia2014.sched.org/event/f40cb73d62a09a1bef036c2775d0fb55?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="f40cb73d62a09a1bef036c2775d0fb55">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">Running At 99%: Surviving An Application DoS</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_4" style="background-color:#FFBC57;margin-top:180px; height:60px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Anatomy of a Webshell" href="http://owaspappseccalifornia2014.sched.org/event/8e021898434315bbb3e2fe8d299745c0?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="8e021898434315bbb3e2fe8d299745c0">
+                                    <p style="height:30px">
+                    <strong class="sched-page-grid-event-name">Anatomy of a Webshell</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:300px; height:120px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="What is CSP and why haven't you applied it yet?" href="http://owaspappseccalifornia2014.sched.org/event/5527b14876bebcd0bf1c01e8d7800195?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="5527b14876bebcd0bf1c01e8d7800195">
+                                    <p style="height:90px">
+                    <strong class="sched-page-grid-event-name">What is CSP and why haven't you applied it yet?</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                               <div class="event sched-page-grid-event event-loggedin ev_3" style="background-color:#B7CDFF;margin-top:600px; height:90px;">
+                                  <span class="ev-save" onclick="saveEvent($(this).next().attr('id'));return false;">&nbsp;</span>
+                                <a class="grid-name" title="Next Generation Red Teaming" href="http://owaspappseccalifornia2014.sched.org/event/cf5cd27346a497c1fc025850a1eb16ba?iframe=yes&amp;w=100&amp;sidebar=no&amp;bg=no" id="cf5cd27346a497c1fc025850a1eb16ba">
+                                    <p style="height:60px">
+                    <strong class="sched-page-grid-event-name">Next Generation Red Teaming</strong>
+                  </p>
+                </a>
+                                <div class="name">
+                                  </div>
+                                </div>
+                            </td>                        <td class="sched-page-grid-session-wrapper">
+                          </td>                        <td class="sched-page-grid-session-wrapper">
+                          </td>                      </tr>
+          
+        </tbody></table>
+                   
+    </div>    </div>   
+    <div class="sched-container-bottom">&nbsp;</div>
+    <div id="sched-page-grid-footer">
+      &nbsp;
+    </div>
+
               </div>            </div>          </div>  
-                        <div id="sched-sidebar-outer">
-    <div id="sched-sidebar" class="col-md-3">
-          </div>  </div>                  </div>      </div>    </div></div>
+                                        </div>      </div>    </div></div>
