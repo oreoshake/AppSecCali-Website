@@ -38,6 +38,7 @@
               <%= nav_link 'Schedule', schedule_path %>
               <%= nav_link 'Speakers', speakers_path %>
               <%= nav_link 'Location', location_path %>
+              <%= nav_link 'Sponsors', sponsors_path %>
               <%= nav_link 'Sponsorship Opportunities', sponsorship_path %>
 
               <li class="dropdown hidden-phone hidden-tablet <%= maybe_add_active_to_about %>">
@@ -63,7 +64,7 @@
           <%= yield %>
         </div>
         <div class="span3">
-          <div class="well sidebar-nav text-center sponsors" style="background-color: #333;">
+          <div class="well sidebar-nav text-center sponsor-logos" style="background-color: #333;">
 
             <h3> Newsletter <h3>
 
@@ -75,25 +76,30 @@
 
             <p class="hidden-phone hidden-tablet"><a href="https://twitter.com/appseccali" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @appseccali</a></p>
 
-            <div class="text-center sponsors" id="sponsors">
+            <div class="text-center sponsors">
               <h2>Diamond Sponsor</h2>
               <%= image_tag('sponsors/db-networks-logo.png') %>
               <h3>Platinum Sponsors</h3>
               <%= image_tag('sponsors/qualys.png') %>
               <%= image_tag('sponsors/SecurityInnovation.png') %>
               <h3>Gold Sponsors</h3>
-              <%= image_tag('sponsors/netspi.jpg') %>
-              <%= image_tag('sponsors/whitehat.jpg') %>
-              <%= image_tag('sponsors/astech.jpg') %>
-              <%= image_tag('sponsors/swamp.png') %>
               <%= image_tag('sponsors/accuvant.jpg') %>
-              <%= image_tag('sponsors/checkmarx.png') %>
-              <%= image_tag('sponsors/Good Logo_PMS485_RGB-jpg (1).png') %>
-              <%= image_tag('sponsors/cenzic.gif') %>
+              <%= image_tag('sponsors/arxan.jpg') %>
+              <%= image_tag('sponsors/astech.jpg') %>
               <%= image_tag('sponsors/brinqa.jpg') %>
+              <%= image_tag('sponsors/cenzic.gif') %>
+              <%= image_tag('sponsors/checkmarx.png') %>
+              <%= image_tag('sponsors/contrast.jpg') %>
+              <%= image_tag('sponsors/Good Logo_PMS485_RGB-jpg (1).png') %>
+              <%= image_tag('sponsors/netspi.jpg') %>
+              <%= image_tag('sponsors/quotium.png') %>
+              <%= image_tag('sponsors/swamp.png') %>
+              <%= image_tag('sponsors/whitehat.jpg') %>
               <h3>Silver Sponsors</h3>
-              <%= image_tag('sponsors/gold_150x45.png') %>
+              <%= image_tag('sponsors/cigital.jpg') %>
               <%= image_tag('sponsors/enigmedia.jpg') %>
+              <%= image_tag('sponsors/gaikai dark.png') %>
+              <%= image_tag('sponsors/gold_150x45.png') %>
               <h4>Misc Sponsors</h4>
               <%= image_tag('sponsors/technical-connections.jpg', width: '193px') %>
               <%= image_tag('sponsors/rackspace.jpg') %>

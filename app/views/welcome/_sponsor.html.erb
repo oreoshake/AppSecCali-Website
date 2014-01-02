@@ -1,0 +1,6 @@
+<div style="padding: 10px">
+<p><%= link_to(image_tag(src), href) %></p>
+<p><%= link_to("Follow #{name}", "https://twitter.com/#{name}", :class => "twitter-follow-button", :'data-dnt' => true, :'data-size' => 'large', :'data-show-count' => "false") if name  %></p>
+</div>
+
+
