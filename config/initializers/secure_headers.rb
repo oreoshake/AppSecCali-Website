@@ -1,6 +1,6 @@
 SecureHeaders::Configuration.configure do |config|
   config.hsts = {
-    max_age: 0,
+    max_age: 20.years.to_i,
     include_subdomains: true
   }
   config.csp = {
